@@ -1,7 +1,6 @@
 from log_control import log
 from configparser import ConfigParser
 from wd import wd_conn
-import time
 
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
@@ -52,15 +51,8 @@ card_owner_run = parser.get('payment_process', 'card_owner_run')
 log('Cambiando focus a zona de pago.')
 wd.switch_to.frame(wd.find_element(By.XPATH, '//iframe[@class="span12"]'))
 WebDriverWait(wd, elements_timeout_limit).until(ec.presence_of_element_located((By.XPATH, '//div[@class="CardForm"]')))
-log('Llenando numero de tarjeta.')
-wd.find_element(By.ID, 'creditCardpayment-card-0Number').click()
-time.sleep(0.5)
-wd.find_element(By.ID, 'creditCardpayment-card-0Number').send_keys(card_number)
 log('Llenando numero de cuotas.')
 wd.find_element(By.ID, 'creditCardpayment-card-0Brand').send_keys('Total')
-log('Llenando nombre y apellido del propietario de la tarjeta.')
-wd.find_element(By.ID, 'creditCardpayment-card-0Name').click()
-wd.find_element(By.ID, 'creditCardpayment-card-0Name').send_keys(card_owner_name)
 log('Llenando mes de vencimiento de tarjeta.')
 for i in range(card_expiration_month):
     wd.find_element(By.ID, 'creditCardpayment-card-0Month').send_keys(Keys.DOWN)
@@ -69,6 +61,12 @@ card_expiration_year_first_value = int(wd.find_element(By.XPATH, '//select[@id="
 card_expiration_year_difference = card_expiration_year - card_expiration_year_first_value
 for i in range(card_expiration_year_difference + 1):
     wd.find_element(By.ID, 'creditCardpayment-card-0Year').send_keys(Keys.DOWN)
+log('Llenando numero de tarjeta.')
+wd.find_element(By.ID, 'creditCardpayment-card-0Number').click()
+wd.find_element(By.ID, 'creditCardpayment-card-0Number').send_keys(card_number)
+log('Llenando nombre y apellido del propietario de la tarjeta.')
+wd.find_element(By.ID, 'creditCardpayment-card-0Name').click()
+wd.find_element(By.ID, 'creditCardpayment-card-0Name').send_keys(card_owner_name)
 log('Llenando CVV.')
 wd.find_element(By.ID, 'creditCardpayment-card-0Code').click()
 wd.find_element(By.ID, 'creditCardpayment-card-0Code').send_keys(cvv)
