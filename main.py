@@ -28,6 +28,9 @@ while True:
 log('Estableciendo tiempo de espera limite...')
 elements_timeout_limit = parser.get('other', 'elements_timeout_limit')
 
+log('Obteniendo sku...')
+sku = parser.get('urls', 'nike_url')
+
 log('Buscando disponibilidad de compra...', 20)
 while True:
     wd.get(r'https://www.nike.cl/checkout/cart/add?sku=30986&qty=1&seller=1&redirect=true&sc=1')
