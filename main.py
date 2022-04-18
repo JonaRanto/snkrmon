@@ -1,6 +1,7 @@
 from log_control import log
 from configparser import ConfigParser
 from wd import wd_conn
+from gui import gui
 
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
@@ -9,6 +10,8 @@ from selenium.webdriver.common.keys import Keys
 
 parser = ConfigParser()
 parser.read('config.ini')
+
+sku = gui()
 
 wd = wd_conn()
 
@@ -29,12 +32,11 @@ log('Estableciendo tiempo de espera limite...')
 elements_timeout_limit = parser.get('other', 'elements_timeout_limit')
 
 log('Obteniendo sku...')
-sku = parser.get('urls', 'nike_url')
+url = parser.get('urls', 'nike_url').replace('[sku]', sku)
 
 log('Buscando disponibilidad de compra...', 20)
 while True:
-    wd.get(r'https://www.nike.cl/checkout/cart/add?sku=30986&qty=1&seller=1&redirect=true&sc=1')
-    #wd.get(r'https://www.nike.cl/checkout/cart/add?sku=30687&qty=1&seller=1&redirect=true&sc=1')
+    wd.get(url)
     WebDriverWait(wd, elements_timeout_limit).until(ec.presence_of_element_located((By.XPATH, '//div[@class="cart-template full-cart span12 active"]//tr[@data-bind="css: {\'muted\': !hasTotal()}"]//td[@class="monetary"]')))
     available = wd.find_element(By.XPATH, '//div[@class="cart-template full-cart span12 active"]//tr[@data-bind="css: {\'muted\': !hasTotal()}"]//td[@class="monetary"]').text
     if available != 'Por calcular':
