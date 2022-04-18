@@ -2,9 +2,15 @@ from tkinter.messagebox import showinfo
 from log_control import log
 import tkinter as tk
 from configparser import ConfigParser
+import os
 
 parser = ConfigParser()
 parser.read('config.ini')
+
+if not os.path.isdir(parser.get('dirs', 'log_dir')):
+    os.makedirs(parser.get('dirs', 'log_dir'))
+if not os.path.isdir(parser.get('dirs', 'chrome_files_dir')):
+    os.makedirs(parser.get('dirs', 'chrome_files_dir'))
 
 def clearOut():
     home_frame.pack_forget()
