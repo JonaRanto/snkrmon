@@ -1,3 +1,4 @@
+from tkinter.messagebox import showinfo
 from log_control import log
 import tkinter as tk
 from configparser import ConfigParser
@@ -108,7 +109,9 @@ def savePaymentSettings():
     # Si el archivo tiene modo escritura, entonces se sobreescribe con la nueva informacion
     with open('config.ini', 'w') as configfile:
         parser.write(configfile)
-    print('alert: Se ha guardado la configuracion de pago.')
+    showinfo('Configuracion guardada', 'La configuracion de pago se ha guardado correctamente.')
+    log('La configuracion de pago se ha guardado correctamente.', 20)
+    onHome()
 
 def saveAdvancedSettings():
     log('Guardando configuracion avanzada...')
@@ -123,7 +126,9 @@ def saveAdvancedSettings():
     # Si el archivo tiene modo escritura, entonces se sobreescribe con la nueva informacion
     with open('config.ini', 'w') as configfile:
         parser.write(configfile)
-    print('alert: Se ha guardado la configuracion avanzada.')
+    showinfo('Configuracion guardada', 'La configuracion avanzada se ha guardado correctamente.')
+    log('La configuracion avanzada se ha guardado correctamente.', 20)
+    onHome()
 
 def start():
     print('Se ha iniciado la aplicacion.')
