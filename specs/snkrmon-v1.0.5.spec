@@ -8,7 +8,7 @@ a = Analysis(
     ['..\\main.py'],
     pathex=[],
     binaries=[],
-    datas=[('config.ini', '.'), ('icon.ico', '.')],
+    datas=[('..\\config.ini', '.'), ('..\\icon.ico', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -37,7 +37,7 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon='icon.ico',
+    icon='C:\\Users\\Jonathan\\git\\snkrmon\\icon.ico',
 )
 coll = COLLECT(
     exe,

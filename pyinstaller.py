@@ -4,4 +4,6 @@ with open('README.md') as f:
     first_line = lines.split('\n', 1)[0]
     version = first_line.split(' ')[-1]
 
-os.system('pyinstaller main.py -n snkrmon-' + version + ' --icon=icon.ico --specpath=specs --add-data=config.ini;. --add-data=icon.ico;. --noconfirm')
+current_path = os.getcwd()
+
+os.system('pyinstaller main.py -n snkrmon-' + version + ' --specpath=specs --icon=' + current_path + '\icon.ico --add-data=..\\config.ini;. --add-data=..\\icon.ico;. --noconfirm')
