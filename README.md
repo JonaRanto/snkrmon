@@ -1,5 +1,7 @@
-# snkrmon v1.0.3
+# snkrmon v1.0.4
 ## Control de versiones
+### v1.0.4 - Actualizacion
+    - Se agrego una caja de mensaje emergente para la validacion de inicio de sesion
 ### v1.0.3 - Actualizacion
     - Si se encuentra algun error durante el proceso de compra, se reinicia todo el proceso.
     - Se agregaron tiempos de espera preventivos para evitar errores en el ingreso de datos.

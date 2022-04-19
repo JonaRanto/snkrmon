@@ -3,6 +3,8 @@ from configparser import ConfigParser
 from wd import wd_conn
 from gui import gui
 import time
+import tkinter as tk
+from tkinter.messagebox import showinfo
 
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
@@ -16,11 +18,15 @@ sku = gui()
 
 wd = wd_conn()
 
+root = tk.Tk()
+root.attributes('-topmost', True)
+root.withdraw()
+
 # Verificar si el usuario se encuentra logeado.
 while True:
     wd.get(r'https://www.nike.cl/login')
     log('Esperando inicio de sesion...', 20)
-    input('Presione Enter luego de iniciar sesion para continuar.')
+    showinfo('Iniciar sesion', 'Precione "Aceptar" o cierre esta ventana luego de iniciar sesion para continuar.')
     wd.get(r'https://www.nike.cl/_secure/account#/profile')
     log('Verificando que se haya iniciado sesion.')
     if wd.current_url == r'https://www.nike.cl/_secure/account#/profile':
