@@ -16,7 +16,7 @@ def log(log: str, lvl: int = 10):
     40: Error
     50: Critical
      '''
-    FILENAME = parser.get('dirs', 'log_dir') + datetime.utcnow().strftime('%Y-%m-%d')
+    FILENAME = parser.get('dirs', 'log_dir') + datetime.utcnow().strftime('%Y-%m-%d') + '.log'
     FORMAT = str(datetime.utcnow()) + '(%(levelname)s): %(message)s'
     logging.basicConfig(filename=FILENAME, level=lvl, format=FORMAT)
     if lvl == 10:

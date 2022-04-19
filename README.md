@@ -1,7 +1,10 @@
-# snkrmon v1.0.4
+# snkrmon v1.0.5
 ## Control de versiones
+### v1.0.5 - Version ejecutable
+    - Ahora se ejecuta por medio de un ".exe".
+    - Se agrega la extension .log a los archivos de logs.
 ### v1.0.4 - Actualizacion
-    - Se agrego una caja de mensaje emergente para la validacion de inicio de sesion
+    - Se agrego una caja de mensaje emergente para la validacion de inicio de sesion.
 ### v1.0.3 - Actualizacion
     - Si se encuentra algun error durante el proceso de compra, se reinicia todo el proceso.
     - Se agregaron tiempos de espera preventivos para evitar errores en el ingreso de datos.
