@@ -14,14 +14,26 @@ from selenium.webdriver.common.keys import Keys
 parser = ConfigParser()
 parser.read('config.ini')
 
-sku = gui()
-
 chrome_path = parser.get('paths', 'chrome_path')
 chrome_filename = parser.get('files', 'chrome_filename')
 port = parser.get('other', 'chrome_port')
 chrome_files = parser.get('dirs', 'chrome_files_dir')
 current_path = os.getcwd() + '\\'
 window_size = parser.get('other', 'window_width') + ',' + parser.get('other', 'window_height')
+
+log('Verificando directorios necesarios...')
+if not os.path.isdir(parser.get('dirs', 'log_dir')):
+    os.makedirs(parser.get('dirs', 'log_dir'))
+if not os.path.isdir(parser.get('dirs', 'chrome_files_dir')):
+    os.makedirs(parser.get('dirs', 'chrome_files_dir'))
+    log('Configurando Chrome...')
+    os.system('robocopy ' + current_path + '\\easy-auto-refresh ' + current_path + chrome_files + ' /MIR')
+    set_extension = wd_conn(chrome_path, chrome_filename, port, chrome_files, current_path, window_size)
+    time.sleep(1)
+    set_extension.close()
+    os.system('copy ' + current_path + '\\easy-auto-refresh\\Default\\Preferences ' + current_path + chrome_files + '\\Default')
+
+sku = gui()
 
 wd = wd_conn(chrome_path, chrome_filename, port, chrome_files, current_path, window_size)
 

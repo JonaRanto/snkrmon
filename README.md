@@ -1,5 +1,7 @@
-# snkrmon v1.0.6
+# snkrmon v1.0.7
 ## Control de versiones
+### v1.0.7 - Se agrega automaticamente auto-refresh
+    - Si no existe un archivo de chrome_files, se genera automaticamente con la extension auto-refresh.
 ### v1.0.6 - Se agrega la extension auto-refresh
     - Se modifico la estructura para funcionar con la extension auto-refresh.
     - Se agrega la carpeta de chrome a los archivos de salida.

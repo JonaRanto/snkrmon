@@ -8,9 +8,6 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 def wd_conn(chrome_path, chrome_filename, port, chrome_files, current_path, window_size):
     from selenium import webdriver as wd
-
-    log('Estableciendo variables de Chrome...')
-    
     cmd = '"' + chrome_path + chrome_filename + '"' + ' --remote-debugging-port=' + port + ' --user-data-dir=' + '"' + current_path + chrome_files + '" --window_size=' + window_size
     
     log('Abriendo Chrome...', 20)
