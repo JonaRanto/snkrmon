@@ -21,7 +21,6 @@ chrome_files = parser.get('dirs', 'chrome_files_dir')
 current_path = os.getcwd() + '\\'
 window_size = parser.get('other', 'window_width') + ',' + parser.get('other', 'window_height')
 
-log('Verificando directorios necesarios...')
 if not os.path.isdir(parser.get('dirs', 'log_dir')):
     os.makedirs(parser.get('dirs', 'log_dir'))
 if not os.path.isdir(parser.get('dirs', 'chrome_files_dir')):

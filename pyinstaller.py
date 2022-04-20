@@ -7,3 +7,4 @@ with open('README.md') as f:
 current_path = os.getcwd()
 
 os.system('pyinstaller main.py -n snkrmon-' + version + ' --specpath=specs --icon=' + current_path + '\icon.ico --add-data=..\\config.ini;. --add-data=..\\icon.ico;. --noconfirm')
+os.system('robocopy easy-auto-refresh dist\\snkrmon-' + version + '\\easy-auto-refresh -E')
