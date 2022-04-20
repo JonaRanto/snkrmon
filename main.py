@@ -2,7 +2,7 @@ from log_control import log
 from configparser import ConfigParser
 from wd import wd_conn
 from gui import gui
-import time
+import time, os
 import tkinter as tk
 from tkinter.messagebox import showinfo
 
@@ -16,17 +16,30 @@ parser.read('config.ini')
 
 sku = gui()
 
-wd = wd_conn()
+chrome_path = parser.get('paths', 'chrome_path')
+chrome_filename = parser.get('files', 'chrome_filename')
+port = parser.get('other', 'chrome_port')
+chrome_files = parser.get('dirs', 'chrome_files_dir')
+current_path = os.getcwd() + '\\'
+window_size = parser.get('other', 'window_width') + ',' + parser.get('other', 'window_height')
+
+wd = wd_conn(chrome_path, chrome_filename, port, chrome_files, current_path, window_size)
 
 root = tk.Tk()
 root.attributes('-topmost', True)
 root.withdraw()
 
+log('Obteniendo sku...')
+url = parser.get('urls', 'nike_url').replace('[sku]', sku)
+
 # Verificar si el usuario se encuentra logeado.
+wd.execute_script('window.open("");')
+wd.get(url.replace('[redirect]', 'false'))
+wd.switch_to.window(wd.window_handles[1])
 while True:
     wd.get(r'https://www.nike.cl/login')
     log('Esperando inicio de sesion...', 20)
-    showinfo('Iniciar sesion', 'Precione "Aceptar" o cierre esta ventana luego de iniciar sesion para continuar.')
+    showinfo('Iniciar sesion', 'Se debe ejecutar el auto-refresh e iniciar sesion para continuar.')
     wd.get(r'https://www.nike.cl/_secure/account#/profile')
     log('Verificando que se haya iniciado sesion.')
     if wd.current_url == r'https://www.nike.cl/_secure/account#/profile':
@@ -38,14 +51,11 @@ while True:
 log('Estableciendo tiempo de espera limite...')
 elements_timeout_limit = parser.get('other', 'elements_timeout_limit')
 
-log('Obteniendo sku...')
-url = parser.get('urls', 'nike_url').replace('[sku]', sku)
-
 while True:
     try:
         log('Buscando disponibilidad de compra...', 20)
         while True:
-            wd.get(url)
+            wd.get(url.replace('[redirect]', 'true'))
             WebDriverWait(wd, elements_timeout_limit).until(ec.presence_of_element_located((By.XPATH, '//div[@class="cart-template full-cart span12 active"]//tr[@data-bind="css: {\'muted\': !hasTotal()}"]//td[@class="monetary"]')))
             available = wd.find_element(By.XPATH, '//div[@class="cart-template full-cart span12 active"]//tr[@data-bind="css: {\'muted\': !hasTotal()}"]//td[@class="monetary"]').text
             if available.find('$') != -1:
@@ -66,7 +76,7 @@ while True:
         wd.switch_to.frame(wd.find_element(By.XPATH, '//iframe[@class="span12"]'))
         WebDriverWait(wd, elements_timeout_limit).until(ec.presence_of_element_located((By.XPATH, '//div[@class="CardForm"]')))
         log('Llenando numero de cuotas.')
-        time.sleep(0.5)
+        time.sleep(1)
         wd.find_element(By.ID, 'creditCardpayment-card-0Brand').send_keys('Total')
         log('Llenando mes de vencimiento de tarjeta.')
         for i in range(card_expiration_month):
@@ -97,8 +107,14 @@ while True:
         wd.find_element(By.XPATH, '//*[@id=\'payment-data-submit\'][2]').click()
 
         time.sleep(1)
-        if wd.current_url == 'https://www.nike.cl/checkout/#/payment' and wd.find_element(By.ID, 'creditCardpayment-card-0Brand').text.find('Total') != -1:
-            log('El proceso de compra se ha finalizado exitosamente.')
-            break
+        if wd.current_url == 'https://www.nike.cl/checkout/#/payment':
+            log('Cambiando focus a zona de pago.')
+            wd.switch_to.frame(wd.find_element(By.XPATH, '//iframe[@class="span12"]'))
+            if len(wd.find_element(By.ID, 'creditCardpayment-card-0Brand').find_elements(By.TAG_NAME, 'option')) != 1:
+                wd.find_element(By.ID, 'creditCardpayment-card-0Brand').send_keys('Total')
+                log('El proceso de compra se ha finalizado exitosamente.')
+                break
+        log('Cambiando el focus a la pagina principal.')
+        wd.switch_to.default_content()
     except Exception as e:
         log(str(e), 40)

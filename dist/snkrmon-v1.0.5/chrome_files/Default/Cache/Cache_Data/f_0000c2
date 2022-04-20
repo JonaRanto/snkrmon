@@ -1,0 +1,986 @@
+
+
+var Braindw = (function () {
+    var BraindwDomReady = function (callback) {
+        document.readyState === "interactive" || document.readyState === "complete" ? callback() : document.addEventListener("DOMContentLoaded", callback);
+    };
+
+    var _HASHBNDW = 'nikecl_produccion_j4ufe';
+    var _COMPANYEXTBNDW = 'nikeclprod';
+    var _COMPANY = 'nikecl_produccion';
+    var _URLBNDW = window.location.protocol + '//s.braindw.com';
+    var _URLBNDWSTATIC = window.location.protocol + '//static-s.braindw.com';
+    var _LAYOUTBDW = '64632ac1-3290-4350-939a-ed5983d913ed';
+    var isAttached = (typeof (isAttached) !== 'undefined') ? isAttached : false;
+    var bdwContents = true;
+
+    function BraindwGetFoundWords() {
+        var e = "",
+            t = document.body.innerText;
+        t = t.replace(/(<([^>]+)>)/gi, " ").toLowerCase();
+        var r = "{wordstofind}".split(",");
+        for (i = 0; i < r.length; i++) - 1 != t.indexOf(r[i]) && (e += r[i] + ",");
+        return e
+    }
+
+    function BraindwLoadScript(e, t, r) {
+        var i = $guadex = function (e) {
+            i._.push(e)
+        },
+            a = BraindwPersistence.GetSucCookie(),
+            o = i.s = e.createElement(t),
+            n = e.getElementsByTagName(t)[0];
+        i.set = function (e) {
+            i.set._.push(e)
+        }, i._ = [], i.set._ = [], o.async = !0, o.setAttribute("charset", "utf-8"), o.src = _URLBNDWSTATIC + "/tracking/track?HASH=" + _HASHBNDW + "&branchOffice=" + a + "&wordsfound=" + BraindwGetFoundWords() + "&buyer={CLIENT.BUYER}&name=&lastname=&gender=&country=&state=&city=&email=&u=" + escape(window.location) + "&hs=" + new Date, i.t = +new Date, o.type = "text/javascript", n.parentNode.insertBefore(o, n)
+    }
+
+    //#region Captures
+    var BraindwCapture = (function () {
+
+        let storageEmailKey = 'bdw_email';
+
+        function ValidateEmail(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        function CookiePush(email) {
+            if (ValidateEmail(email)) {
+                var bdwEmailStorage = localStorage.getItem(storageEmailKey);
+                if (bdwEmailStorage && bdwEmailStorage === email) {
+                    return;
+                }
+                try {
+                    fetch(_URLBNDW + '/tracking/SetCookiesNdway?email=' + email + '&company=' + _COMPANY, {
+                        credentials: "include",
+                        mode: 'no-cors',
+                        method: 'POST',
+                    })
+                        .then(function (resp) {
+                            return resp.text();
+                        })
+                        .then(function (data) {
+                            localStorage.setItem(storageEmailKey, email);
+                            BraindwPersistence.PushInfo(email);
+                            return false;
+                        })
+                        .catch(function (ex) {
+                            console.log(ex);
+                        });
+                } catch (e) { }
+            }
+        }
+
+        function EmailsSite(btnEmailSelector, textBoxSelector) {
+            bindEvent(document.querySelector(btnEmailSelector), 'click', function (e) {
+                var email = document.querySelector(textBoxSelector).value;
+                if (email == undefined) {
+                    email = "";
+                    if (email == undefined || email == "")
+                        return;
+                }
+                CookiePush(email);
+            });
+        }
+
+        function Category(category) {
+            localStorage.setItem('bdw_last_category', vtxctx.categoryId);
+            let _bndwOb2 = document.createElement('script');
+            _bndwOb2.async = true;
+            _bndwOb2.src = `${_URLBNDW}/tracking/capture?HASH=${_HASHBNDW}&iscategory=true&og:categorycode=${category}`;
+            _bndwOb2.charset = "UTF-8";
+            document.head.appendChild(_bndwOb2);
+        }
+
+        function Product(productId, isCart) {
+            fetch('https://' + document.URL.split('/')[2] + '/api/catalog_system/pub/products/search?fq=productId:' + productId + '&sc=' + BraindwPersistence.GetSucCookie())
+                .then((resp) => resp.json())
+                .then(function (data) {
+                    if (data.length > 0) {
+                        var tax = 0;
+                        var itemsWithStock = data[0].items.filter(function (item) {
+                            return item.sellers[0].commertialOffer.AvailableQuantity > 0;
+                        });
+
+                        if (itemsWithStock[0].sellers[0].commertialOffer.Tax > 0) {
+                            tax = itemsWithStock[0].sellers[0].commertialOffer.Tax + 0.01;
+                        }
+                        var price = itemsWithStock[0].sellers[0].commertialOffer.Price + tax;
+                        var oldPrice = itemsWithStock[0].sellers[0].commertialOffer.ListPrice + tax;
+                        var onlinePrice = itemsWithStock[0].sellers[0].commertialOffer.PriceWithoutDiscount + tax;
+                        if (price == oldPrice)
+                            oldPrice = "";
+
+                        var bdw_arbol_product_clusters = '';
+                        var clusters = data[0].productClusters;
+                        var clusterArray = Object.keys(clusters).map((key) => [key, clusters[key]]);
+                        var clusterId = "";
+                        clusterArray.forEach(function (clusterId) {
+                            bdw_arbol_product_clusters += 'cl_' + clusterId[0] + ",";
+                        });
+
+                        const categoriesId = data[0].categoriesIds[0].split('/').filter(Boolean);
+                        let categoryGen = "";
+
+                        if (data[0].Género && data[0].Género.length > 0) {
+                            categoriesId.forEach(category => {
+                                data[0].Género.forEach(gender => {
+                                    categoryGen = categoryGen + category + '_' + gender + ',';
+                                });
+                            });
+                        }
+
+                        var urlParameters = "og:title=" + encodeURIComponent(data[0].productName) + "&og:image=" + encodeURIComponent(itemsWithStock[0].images[0].imageUrl) + "&og:url=" + document.URL.replace("#", "") + "&og:categoriescodes=" + categoriesId.toString() + "," + categoryGen + bdw_arbol_product_clusters + '&og:codeproduct=' + data[0].productId + '&og:brand=' + data[0].brand + '&og:categorycode=' + data[0].categoryId + '&og:price=' + price + '&og:priceold=' + oldPrice + '&og:og:pricesale=' + onlinePrice + '&iscart=' + isCart;
+
+                        var _bndwOb2 = document.createElement('script');
+                        _bndwOb2.async = true;
+                        _bndwOb2.src = `${_URLBNDW}/tracking/capture?HASH=${_HASHBNDW}&${urlParameters}`;
+                        _bndwOb2.charset = "UTF-8";
+                        document.head.appendChild(_bndwOb2);
+
+                        if (!isCart) {
+                            BraindwPersistence.GetProduct(data);
+                            const urlCategory = location.origin + data[0].categories[0];
+                            BraindwPersistence.GetCategory(urlCategory);
+                            return;
+                        }
+                    }
+                })
+                .catch(function (ex) {
+                    console.log(ex);
+                });
+        }
+
+        function LoggedUser() {
+            fetch('/api/vtexid/pub/authenticated/user')
+                .then(r => r.json())
+                .then(data => {
+                    if (data !== null && data.user) {
+                        CookiePush(data.user);
+                    }
+                })
+                .catch();
+        }
+
+        return {
+            Category,
+            Product,
+            EmailsSite,
+            LoggedUser
+        }
+    })();
+
+    //#endregion
+
+    //#region Persistencia
+    var BraindwPersistence = (function () {
+
+        let storageEmailKey = 'bdw_email';
+
+        function CheckOrder(orderForm) {
+            const storageOrderKey = 'bdw_itemsOrder';
+
+            const oldItems = localStorage.getItem(storageOrderKey);
+            const newItems = JSON.stringify(orderForm.items);
+
+            if (oldItems === null || oldItems === '' || oldItems !== newItems) {
+                localStorage.setItem(storageOrderKey, newItems);
+                return true;
+            }
+
+            return false;
+        }
+
+        function ItemsFormatter(data) {
+            let itemsArray = [];
+            for (var i = 0; i < data.items.length; i++) {
+                itemsArray.push({
+                    ProductTitle: data.items[i].name,
+                    ProductCode: data.items[i].productId,
+                    ProductUrlImage: data.items[i].imageUrl,
+                    ProductQuantity: data.items[i].quantity,
+                    ProductQuantityDetails: '',
+                    ProductPrice: (data.items[i].sellingPrice / 100).toString(),
+                    PriceTotal: (data.items[i].sellingPrice / 100) * data.items[i].quantity,
+                    Event: "Load"
+                })
+            }
+            return itemsArray;
+        }
+
+        function ProcessOrder(orderForm) {
+            let e = null;
+            var items = [];
+
+            //var data = vtexjs.checkout.orderForm;
+            if (orderForm != undefined && CheckOrder(orderForm)) {
+                items = ItemsFormatter(orderForm);
+
+                e = {
+                    CartNumber: '',
+                    BranchOffice: GetSucCookie(),
+                    Items: items
+                }
+            }
+            return e;
+        }
+
+        function CartOpened(orderForm) {
+            let e = {
+                sessionDate: GetSessionDate()
+            };
+            let a = ProcessOrder(orderForm);
+            e.cartOpened = a;
+            if (e.cartOpened !== null) {
+                SendPersistency(e);
+            }
+        }
+
+        function GetCartOpened() {
+            let e = null;
+            var items = [];
+            if (typeof vtexjs == "undefined") return e;
+
+            var data = vtexjs.checkout.orderForm;
+            if (data != undefined) {
+                items = ItemsFormatter(data);
+            }
+
+            e = {
+                CartNumber: '',
+                BranchOffice: GetSucCookie(),
+                Items: items
+            }
+
+            return e;
+        }
+
+        function GetCartClosed() {
+            var t = document.URL;
+            if (-1 == t.toLowerCase().indexOf("/checkout/orderconfirmation") && -1 == t.toLowerCase().indexOf("/checkout/orderplaced")) {
+                return e;
+            }
+            let r = t.split("og=")[1],
+                i = [],
+                e = {
+                    CartNumber: r,
+                    Items: i
+                }
+            return e
+        }
+
+        function GetEmail() {
+            return localStorage.getItem(storageEmailKey) ?? '';
+        }
+
+        function GetCarts() {
+            if (typeof vtexjs == "undefined") {
+                let e = {
+                    sessionDate: GetSessionDate()
+                };
+                const a = GetCartClosed();
+                e.cartClosed = a;
+                SendPersistency(e);
+            } else {
+                $(window).on("orderFormUpdated.vtex", function (evt, orderForm) {
+                    console.log('BDW OrderFormUpdated Event');
+                    CartOpened(orderForm);
+                });
+            }
+        }
+
+        function GetProduct(data) {
+            let e = null;
+            if (data.length > 0) {
+                var s = {},
+                    t = GetSessionDate();
+                t && (s.sessionDate = t);
+                e = {
+                    ProductCode: data[0].productId, //data[0].items[i].itemId,
+                    Title: data[0].items[0].nameComplete,
+                    PriceOnline: data[0].items[0].sellers[0].commertialOffer.PriceWithoutDiscount,
+                    Brand: data[0].brand,
+                    Category: data[0].categories[0].split('/')[data[0].categories[0].split('/').length - 2],
+                    CategoryCode: data[0].categoryId,
+                    UrlImage: data[0].items[0].images[0].imageUrl,
+                    UrlProduct: document.URL,
+                    BranchOffice: GetSucCookie()
+                };
+                s.product = e;
+                SendPersistency(s);
+            }
+        }
+
+        function GetSucCookie() {
+            let BraindwCa = decodeURIComponent(document.cookie).split(';');
+            for (let bnwi = 0; bnwi < BraindwCa.length; bnwi++) {
+                if (BraindwCa[bnwi].indexOf("VTEXSC") > -1) {
+                    return BraindwCa[bnwi].split('=')[2];
+                }
+            }
+            return '';
+        }
+
+        function GetSessionDate() {
+            let result = null;
+            try {
+                let SalesChannel = GetSucCookie();
+                result = {
+                    SalesChannel: SalesChannel,
+                };
+            } catch (e) {
+                console.log('GetSessionDate error ', e);
+            }
+            return result;
+        }
+
+        function SendPersistency(e, url) {
+            let n = {
+                emailguest: GetEmail(),
+                dataset: encodeURI(JSON.stringify(e)),
+                page: "",
+                url: (url) ? url : window.location.href.split("?")[0],
+                urlb: `${_URLBNDW}/Script/braindw/${_HASHBNDW}?hs=Sat Apr 21 2018 10:00:38 GMT-0300 (Hora estándar de Argentina)`,
+                BranchOffice: GetSucCookie()
+            };
+
+            fetch('https://p.braindw.com/Api/Data/Capture', {
+                method: "POST",
+                body: JSON.stringify(n),
+                credentials: 'include',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                }
+            })
+                .then((resp) => resp.json())
+                .then(function (data) {
+
+                })
+                .catch(function (ex) {
+                    console.log(ex);
+                });
+        }
+
+        function GetCategory(urlCategory) {
+            try {
+                let e = null;
+                if (typeof vtxctx !== undefined && vtxctx.categoryId !== "") {
+                    e = {
+                        Title: vtxctx.categoryName,
+                        CategoryCode: vtxctx.categoryId,
+                        Specifications: CategorySpecificationFromUrl()
+                    }
+
+                    if (e != null) {
+                        var s = {},
+                            t = GetSessionDate();
+                        t && (s.sessionDate = t);
+                        s.category = e
+                        SendPersistency(s, urlCategory);
+                    }
+                }
+            } catch (e) { }
+        }
+
+        function PushTermNotFound(term) {
+            try {
+                if (term && term !== '') {
+                    let e = {
+                        sessionDate: GetSessionDate()
+                    };
+                    e.search = { searchterm: term };
+                    SendPersistency(e);
+                }
+            }
+            catch (e) { console.log('BDW ' + e); }
+        }
+
+        function PushInfo(emailGuest) {
+            let e = {
+                sessionDate: GetSessionDate()
+            };
+            let a = GetCartOpened();
+            a ? e.cartOpened = a : (a = GetCartClosed()) && (e.cartClosed = a);
+            SendPersistency(e);
+        }
+
+        return {
+            GetProduct,
+            GetSucCookie,
+            GetCategory,
+            GetCarts,
+            PushInfo,
+            PushTermNotFound
+        }
+    })();
+    //#endregion
+
+    function CategorySpecificationFromUrl() {
+        var bdwSpecificationList = '';//lista de specifications
+        try {
+            var bdwParamSpecification = BraindwGetUrlParam('map', false);
+            if (bdwParamSpecification !== '' && bdwParamSpecification.indexOf('c,') !== -1) {
+                bdwParamSpecification = bdwParamSpecification.replace('specificationFilter_25,specificationFilter_25', 'specificationFilter_25');
+                //bdwParamSpecification = bdwParamSpecification.split('c,c,')[1];
+                var bdwArrSpecification = bdwParamSpecification.split(',').filter(t => t !== 'c');
+                if (bdwParamSpecification.length > 0) {
+                    var bdwCurrentUrlSpecification = window.location.href.replace('/?', '?').split('?')[0];
+                    var bdwIndexPositionValue = 0;
+                    for (var i = bdwArrSpecification.length - 1; i >= 0; i--) {
+                        bdwIndexPositionValue += 1;
+                        var bdwSpecificationValue = bdwCurrentUrlSpecification.split('/')[bdwCurrentUrlSpecification.split('/').length - bdwIndexPositionValue];
+                        if (bdwSpecificationValue.length > 0 && bdwArrSpecification[i].toLowerCase().indexOf('specificationfilter') != -1) {
+                            if (bdwSpecificationList.length > 0) bdwSpecificationList += ',';
+                            bdwSpecificationList += bdwArrSpecification[i] + ':' + bdwSpecificationValue;
+                        }
+                    }
+                }
+            }
+
+        }
+        catch (e) { console.log('err->specification'); }
+        return bdwSpecificationList;
+    }
+
+    function BraindwAddHeaderComponent(type, url) {
+        switch (type) {
+            case 'css':
+                let _bndwObjc = document.createElement('link');
+                _bndwObjc.rel = 'stylesheet';
+                _bndwObjc.href = url;
+                _bndwObjc.type = "text/css";
+                document.head.appendChild(_bndwObjc);
+                break;
+            case 'script':
+                let _bndwObjs = document.createElement('script');
+                _bndwObjs.async = true;
+                _bndwObjs.src = url
+                _bndwObjs.charset = "UTF-8";
+                document.head.appendChild(_bndwObjs);
+                break;
+            default:
+                console.log(`BDW AddHeaderComponent. Type: ${type} no reconocido`);
+                break;
+        }
+    }
+
+    function BraindwGetUrlParam(paramName, usetoLower = true) {
+        const url = new URL(usetoLower ? location.href.toLocaleLowerCase() : location.href);
+        const param = url.searchParams.get(usetoLower ? paramName.toLowerCase() : paramName) ?? '';
+        return decodeURI(param);
+    }
+
+    function BraindwGetSection() {
+        if (location.href.includes('/?lid=6a5c70e7-8bc0-467b-877f-99c2af536e46')) {
+            return 'searchnoresult';
+        } else if (location.href.toLowerCase().indexOf("/sportswear?") > -1 || location.href.endsWith('/sportswear')) {
+            return 'landing';
+        } else if (location.href.toLowerCase().indexOf("cartabandoned=") > -1) {
+            return 'cartabandoned';
+        } else if (location.href.toLowerCase().indexOf("/buscar?text") > -1) {
+            return 'busca';
+        } else if (location.href.includes('fq=H:')) {
+            return 'collection';
+        } else if (typeof vtxctx === 'undefined') {
+            if (location.href.toLowerCase().includes('/checkout/#/cart')) {
+                return 'checkout';
+            }
+            return '';
+        } else if (vtxctx.skus === undefined) {
+            if (vtxctx.searchTerm !== '') {
+                if (location.href.includes('/buscavazia')) {
+                    return 'searchnoresult';
+                } else {
+                    return 'search';
+                }
+            } else if (vtxctx.categoryId === undefined && vtxctx.departmentyId === undefined) {
+                return 'home';
+            } else if (vtxctx.departmentyId === vtxctx.categoryId) {
+                return 'department';
+            } else {
+                return 'category';
+            }
+        } else {
+            return 'product';
+        }
+    }
+
+    var bdwRankingCategories = (function () {
+        const localStorageKey = 'bdw_ranking_categories';
+
+        function FindCategory(idCategory) {
+            const s = localStorage.getItem(localStorageKey);
+            if (s === null || s === '') {
+                return null;
+            }
+            const o = JSON.parse(s)
+            if (o === null || o.length === 0) {
+                return null;
+            }
+            return o.find(i => i.categoryId === idCategory);
+        }
+
+        function RankingAdd(element) {
+            let arr = JSON.parse(localStorage.getItem(localStorageKey));
+            if (arr === null || arr === undefined || arr.length === 0) {
+                arr = [element];
+            } else {
+                arr.push(element);
+            }
+            localStorage.setItem(localStorageKey, JSON.stringify(arr));
+        }
+
+        function RankingUpdate(element) {
+            let arr = JSON.parse(localStorage.getItem(localStorageKey));
+            arr.splice(arr.findIndex(i => i.categoryId === element.categoryId), 1, element);
+            localStorage.setItem(localStorageKey, JSON.stringify(arr));
+        }
+
+        function Add(idCategory) {
+            let obj = FindCategory(idCategory);
+            if (obj === null || obj === undefined) {
+                obj = {
+                    categoryId: idCategory,
+                    visits: 1
+                };
+                RankingAdd(obj);
+            } else {
+                obj.visits++;
+                RankingUpdate(obj);
+            }
+        }
+
+        function Get() {
+            const s = localStorage.getItem(localStorageKey);
+            if (s === null || s === '') {
+                return '';
+            }
+            const o = JSON.parse(s)
+            if (o === null || o.length === 0) {
+                return '';
+            }
+            let arr = o.sort((a, b) => {
+                return b.visits - a.visits;
+            }).map(c => c.categoryId);
+            return arr;
+
+        }
+        return { Add, Get };
+    })();
+
+    function BraindwSetLastNavigated(tipo, data) {
+        let storageKey = '';
+        let maxItems = 20;
+        switch (tipo.toLowerCase()) {
+            case 'product':
+                storageKey = 'bdw_last_productIds';
+                break;
+            case 'category':
+                bdwRankingCategories.Add(data.toString());
+                storageKey = 'bdw_last_categories';
+                break;
+            case 'addtocart':
+                storageKey = 'bdw_last_addToCart';
+                break;
+            case 'search':
+                maxItems = 1;
+                if (data !== '' && data.indexOf('Buscar...') === -1) {
+                    storageKey = 'bdw_last_searchTerm';
+                }
+                break;
+            default:
+                break;
+        }
+        if (storageKey !== '') {
+            let stData = data.toString();
+            var lastItems = localStorage.getItem(storageKey);
+            var lastItemsList = [];
+
+            if (lastItems === null || lastItems === undefined || lastItems === '') {
+                localStorage.setItem(storageKey, stData);
+            } else {
+                lastItemsList = lastItems.split(',', maxItems);
+                if (lastItemsList[0] !== stData) {
+                    let index = lastItemsList.findIndex(item => item === stData);
+                    if (index !== -1) {
+                        lastItemsList.splice(index, 1);
+                    }
+                    lastItemsList.unshift(stData);
+                    localStorage.setItem(storageKey, lastItemsList.toString());
+                }
+            }
+        }
+    }
+
+    function BraindwInsertDivs(section) {
+        let element = null
+        switch (section) {
+            case 'home':
+            case 'department':
+            case 'category':
+            case 'product':
+            case 'checkout':
+            case 'searchnoresult':
+                $('#product-related').html(`<div id="BDW-Carrusel-Search-1"></div>
+                                            <div id="BDW-Carrusel-Search-2"></div>
+                                            <div id="BDW-Carrusel-Search-3"></div>
+                                            <div id="BDW-Carrusel-Search-4"></div>`);
+            case 'landing':
+            default:
+                break;
+        }
+    }
+
+    function bindEvent(element, eventName, eventHandler) {
+        try {
+            if (element.addEventListener)
+                element.addEventListener(eventName, eventHandler, false);
+            else if (element.attachEvent)
+                element.attachEvent('on' + eventName, eventHandler);
+        } catch (e) { }
+    }
+
+    function BraindwPushEvent(cat, act, eti) {
+        try {
+            dataLayer.push({
+                event: "ga-braindw",
+                eventCategory: cat,
+                eventAction: act,
+                eventLabel: eti,
+            });
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    function BraindwEvent(component, data) {
+        try {
+            let productTitle = component.querySelector('.datainfo a.product-name').getAttribute('title');
+            let productId = component.querySelector('ul>li>div').getAttribute('id').replace('product-', '');
+            let etiqueta = data.GaEventLabel;
+            etiqueta = etiqueta.replace('{title}', productTitle);
+            etiqueta = etiqueta.replace('{sku}', productId);
+
+            bindEvent($('>li', component)[0], 'click', function () {
+                BraindwPushEvent(data.GaEventCategory, data.GaEventAction, etiqueta);
+            });
+        }
+        catch (error) {
+            console.log('BraindwEvent Error:' + error);
+        }
+    }
+
+    async function BraindwCategoryTreeFromProduct(productId) {
+        let categoryTree = '';
+        await fetch(`https://${document.URL.split("/")[2]}/api/catalog_system/pub/products/search?fq=productId:${productId}&sc=${BraindwPersistence.GetSucCookie()}`)
+            .then((resp) => resp.json())
+            .then(function (data) {
+                if (data.length > 0) {
+                    categoryTree = data[0].categoriesIds[0].split('/');
+                    categoryTree = categoryTree.splice(1, categoryTree.length - 2);
+                }
+            })
+            .catch(function (ex) {
+                console.log(ex);
+            });
+        return categoryTree;
+    }
+
+    function GetNoResultTerm() {
+        return BraindwGetUrlParam('ft') !== '' ? BraindwGetUrlParam('ft') : BraindwGetUrlParam('term');
+    }
+
+    async function BraindwRender() {
+        let _section = BraindwGetSection();
+        let _bdwUrlRequestSection = '';
+        let _bdwMaxItems = 15;
+        BraindwInsertDivs(_section);
+        switch (_section) {
+            case 'home':
+                _bdwUrlRequestSection = `home/1/${localStorage.getItem('bdw_last_category') ?? ''}/${localStorage.getItem('bdw_last_productIds') ?? ''}`;
+                break;
+            //case 'search':
+            case 'department':
+            case 'category':
+                _bdwUrlRequestSection = `category/${vtxctx.categoryId}/${CategorySpecificationFromUrl()}`;
+                break;
+            case 'product':
+                let _categoryTree = await BraindwCategoryTreeFromProduct(skuJson_0.productId);
+                let _categoryIntermedia = _categoryTree.length >= 2 ? _categoryTree[_categoryTree.length - 2] : vtxctx.departmentyId;
+                _bdwUrlRequestSection = `product/${skuJson_0.productId}/${vtxctx.categoryId}/${_categoryIntermedia}/${_categoryTree}`;
+                break;
+            case 'checkout':
+                /* Desactivado para implementación x CMS */
+                let idList = [];
+                let categoryList = [];
+                await vtexjs.checkout.getOrderForm().done(function (order) {
+                    order.items.forEach(item => {
+                        idList.push(item.productId);
+                        categoryList.push(item.productCategoryIds.split('/').filter(Boolean));
+                    });
+                });
+                if (idList.length > 0) {
+                    _bdwUrlRequestSection = `checkout/${idList.toString()}/${categoryList.toString()}/${localStorage.getItem('bdw_last_category') ?? ''}/${localStorage.getItem('bdw_last_productIds') ?? ''}`;
+                }
+                break;
+            case 'searchnoresult':
+                _bdwUrlRequestSection = `searchnoresult/${GetNoResultTerm()}`;
+                break;
+            case 'collection':
+                _bdwUrlRequestSection = `collection/${BraindwGetUrlParam('fq', false).replace('H:', '')}`;
+                break;
+            case 'landing':
+                _bdwUrlRequestSection = `landing`;
+                break;
+            default:
+                break;
+        }
+
+        if (_bdwUrlRequestSection != '') {
+            console.log('BDW Get ' + _section);
+            _bdwUrlRequestSection = `${_URLBNDWSTATIC}/tracking/track?HASH=${_HASHBNDW}&branchOffice=1&whitelabel=&wordsfound=&buyer=&name=&lastname=&gender=&country=&state=&city=&email=&u=${_bdwUrlRequestSection}`;
+            //console.log('BDW Request: ' + _bdwUrlRequestSection);
+            fetch(_bdwUrlRequestSection, { credentials: 'include' })
+                .then(res => res.json())
+                .then(data => {
+                    data.forEach(obj => {
+                        console.log('BDW ' + obj.Section);
+                        if (document.querySelector("#" + obj.Section)) {
+                            //document.querySelector("#" + obj.Section).classList.add('content-braindw');
+                            let _productQuery = '';
+                            for (let i = 0; i < obj.Products.length && i <= _bdwMaxItems; i++) {
+                                let idProduct = obj.Products[i];
+                                if (idProduct != '' && idProduct != null && idProduct != undefined) {
+                                    _productQuery += '&fq=productId:' + idProduct;
+                                }
+                            }
+
+                            if (_productQuery != '') {
+                                fetch('/buscapagina?PS=' + _bdwMaxItems + '&sl=' + _LAYOUTBDW + '&cc=1&sm=0&PageNumber=1' + _productQuery)
+                                    .then(res => res.text())
+                                    .then(data => {
+                                        console.log('BDW Render ' + _section + ' ' + obj.Section);
+                                        $("#" + obj.Section).html('');
+                                        let _contentItems = $(data)[1];
+                                        if (_contentItems.toString().length > 0) {
+                                            //order items
+                                            $('>ul>li.helperComplement', _contentItems).remove();
+                                            let _list = $('>ul', _contentItems);
+                                            $('>ul', _contentItems).remove();
+
+                                            obj.Products.forEach(productid => {
+                                                for (let i = 0; i < _list.length; i++) {
+                                                    let itemId = $('li>div', _list[i]).attr('id').replace('product-', '');
+                                                    if (itemId === productid) {
+                                                        BraindwEvent(_list[i], obj);
+                                                        $(_contentItems).append(_list[i]);
+                                                        break;
+                                                    }
+                                                }
+                                            });
+
+                                            $('#' + obj.Section).html(_contentItems);
+
+                                            if (obj.Title !== '') {
+                                                $('#' + obj.Section).prepend('<div class="block-title"></div>')
+                                                $('#' + obj.Section + ' .block-title').prepend('<h4>' + obj.Title + '</h4>');
+                                            }
+
+                                            jQuery('#' + obj.Section + ' .products-shelf').addClass('owl-carousel'), jQuery('#' + obj.Section + ' .products-shelf').owlCarousel({
+
+                                                slideBy: 1,
+                                                loop: obj.Products.length > 3,
+                                                stagePadding: 100,
+                                                margin: 10,
+                                                nav: true,
+                                                dots: true,
+                                                autoplay: false,
+                                                autoplaySpeed: 100,
+                                                items: 3,
+                                                responsive: {
+                                                    0: {
+                                                        stagePadding: 50,
+                                                        nav: false,
+                                                        dots: false,
+                                                        items: 1,
+                                                        loop: true
+                                                    },
+                                                    700: {
+                                                        items: 2,
+                                                        loop: obj.Products.length > 2,
+                                                        nav: false,
+                                                        dots: false
+                                                    },
+                                                    900: {
+                                                        items: 3,
+                                                        loop: obj.Products.length > 3
+                                                    }
+                                                }
+                                            });
+                                        }
+                                    })
+                                    .catch(error => { console.log(error) });
+                            }
+
+                        }
+                    });
+                })
+                .catch(error => { console.log(error) });
+        }
+    }
+
+    function BraindwCartAbandoned() {
+        try {
+            document.querySelector('body footer').insertAdjacentHTML('beforeend', `<div id="braindw_loader" style="display: none;">
+            <div class="braindw_overlay_cupon2" style="display: flex;width: 100%;height: 100%;background-color: rgba(0,0,0,0.2);position: fixed;top: 0;left: 0;"></div>
+            <div class="braindw_loading2" style="border: 10px solid #d1d1d1; width: 450px; height: 250px;background-color: #fff; color: #898989; position: absolute; top: 15%; right: 50%; left: 33%; z-index: 2000;">
+                <div id="braindw_loading2" style="display: block;padding: 30px;text-align: center;height: 150px;">
+                <i class="icon-carrito" style="color: #114d97!important; font-family: icomoon!important; font-size: 100px;"> </i>
+                <p style="font-size: larger; margin-top: 50px;">Esperá un momento, tu carro se está cargando.</p>
+                </div>
+            </div>
+        </div>`);
+            console.log("cartAbandoned...");
+            $("#braindw_loader").show();
+            const idArray = BraindwGetUrlParam('CartAbandoned').split(',').filter(Boolean);
+            let queryString = '';
+            idArray.forEach(id => {
+                queryString += '&fq=productId:' + id;
+            })
+            if (queryString !== '') {
+                queryString = `/api/catalog_system/pub/products/search?${queryString}&sc=${BraindwPersistence.GetSucCookie()}`;
+                fetch(queryString)
+                    .then(r => r.json())
+                    .then(function (data) {
+                        let itemsArray = []
+                        if (data.length > 0) {
+                            itemsArray = data.map(item => {
+                                return {
+                                    id: item.items[0].itemId,
+                                    quantity: 1,
+                                    seller: item.items[0].sellers[0].sellerId
+                                }
+                            })
+                        }
+                        if (itemsArray.length > 0) {
+                            vtexjs.checkout.getOrderForm().done(function (orderfrom) {
+                                vtexjs.checkout.addToCart(itemsArray, null, 1).done(function (orderfrom) {
+                                    setTimeout(function () {
+                                        $("#braindw_loader").hide();
+                                        window.location.href = location.origin + '/checkout/#/cart';
+                                    }, 500);
+                                });
+                            });
+                        } else {
+                            $("#braindw_loader").hide();
+                        }
+                    })
+                    .catch(error => {
+                        $("#braindw_loader").hide();
+                        console.log('BDW CartAbandoned. Error catalog querie' + error);
+                    })
+            } else {
+                $("#braindw_loader").hide();
+            }
+        }
+        catch (e) {
+            $("#braindw_loader").hide();
+            console.log('BDW CartAbandoned. Exception:' + e);
+        }
+    }
+
+    BraindwDomReady(function () {
+        try {
+            console.log('BDW NikeCl');
+
+            BraindwLoadScript(document, "script", escape(window.location));
+            window.onpopstate = function (e) {
+                BraindwLoadScript(document, "script", escape(document.location));
+            }
+
+            let _bdwSection = BraindwGetSection();
+
+            if (_bdwSection === 'department' || _bdwSection == 'category' || _bdwSection == 'product') {
+                if (typeof vtxctx !== 'undefined' && vtxctx.categoryId) {
+                    BraindwCapture.Category(vtxctx.categoryId);
+                    if (_bdwSection !== 'product') {
+                        BraindwPersistence.GetCategory();
+                    }
+                    BraindwSetLastNavigated('Category', vtxctx.categoryId);
+                    console.log('BDW Category: ' + vtxctx.categoryId);
+                }
+            }
+
+            if (_bdwSection == 'product') {
+                if (typeof skuJson_0 !== 'undefined') {
+                    braindw_productId = skuJson_0.productId;
+                    BraindwCapture.Product(braindw_productId, 0);
+                    BraindwSetLastNavigated('Product', braindw_productId);
+
+                    $('.buy-button-box a.buy-in-page-button').click(function (e) {
+                        console.log('Agrego producto al carro');
+                        var productId = skuJson_0.productId;
+                        BraindwSetLastNavigated('AddToCart', productId);
+                        BraindwCapture.Product(productId, 1);
+                    });
+
+                    console.log('BDW Product Id: ' + braindw_productId);
+                }
+            }
+
+            if ($('#newsletter')[0]) {
+                BraindwCapture.EmailsSite('#newsletter button#buttonOk', '#newsletter input#email');
+            }
+            //BraindwCapture.LoggedUser();
+            if (location.href.includes('checkout/#/email')) {
+                BraindwCapture.EmailsSite('#btn-client-pre-email', '#client-pre-email');
+            }
+            window.onpopstate = function (e) {
+                if (location.href.includes('checkout/#/email')) {
+                    BraindwCapture.EmailsSite('#btn-client-pre-email', '#client-pre-email');
+                }
+            }
+
+            switch (_bdwSection) {
+                case 'search':
+                    BraindwSetLastNavigated('Search', vtxctx.searchTerm);
+                    break;
+                case 'searchnoresult':
+                    BraindwSetLastNavigated('Search', GetNoResultTerm());
+                    BraindwPersistence.PushTermNotFound(GetNoResultTerm());
+                    break;
+                case 'busca':
+                    BraindwSetLastNavigated('Search', BraindwGetUrlParam('text'));
+                    break;
+                default:
+                    break;
+            }
+
+            switch (_bdwSection) {
+                case 'cartabandoned':
+                    BraindwCartAbandoned();
+                    break;
+                /*case 'busca':
+                    BraindwBusca.RenderBusca();
+                    break;*/
+                default:
+                    if (bdwContents) {
+                        BraindwRender();
+                    }
+                    break;
+            }
+
+            localStorage.setItem('currentPage', location.href);
+            isAttached = true;
+
+            BraindwPersistence.GetCarts();
+
+        } catch (e) {
+            console.log('[Braindw] [error]')
+        }
+    });
+
+})();
+ try{ console.log('[abtest 0] [usertest ]'); } catch(e) {console.log('error load abtest log')}

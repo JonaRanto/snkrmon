@@ -1,0 +1,402 @@
+<!-- 
+ * Developed by Brandlive
+ * [brandlivecommerce.com]
+ * 
+ * Template Name: Home Pages
+ * Dependencies:
+ * - HTML: New Head, New Menu, New Footer
+ * - Custom Element: Color Table (For Products on View)
+ *
+ -->
+<!DOCTYPE html >
+<html lang="es-AR" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#"><meta name="language" content="es-CL" />
+<meta name="country" content="CHL" />
+<meta name="currency" content="$" />
+<!-- Full General Head --><meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="description" content="EL ICÓNICO 1. /br /br El icónico Air Jordan 1 mantiene su diseño familiar e impecable, pero ahora se renueva para la cultura actual de los amantes del" />
+<meta name="Abstract" content="Air Jordan 1 Retro High Og - Calzado - Snkrs" />
+<meta name="author" content="Nike Chile." />
+<meta name="copyright" content="Nike Chile." />
+<meta name="vtex-version" content="1.5.49.2459" />
+<meta http-equiv="pragma" content="no-cache" />
+<title>Air Jordan 1 Retro High Og - Calzado - Snkrs - Nike Chile</title><script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=-jni3fiYzbrJI28mSRcPs2aBr3nQrxDttw6BdGjFDRaFh6KFycwtBEVWw6Zs-UxWnQ8mBnCaBnS0j597EyBrYtZHi96L8lpF9mPFmAM-nLs" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly93d3cubmlrZS5jbC81NTUwODgtMTYxLWFpci1qb3JkYW4tMS1yZXRyby1oaWdoLW9nL3A"/><script type="text/javascript" language="javascript">var jscheckoutUrl = 'https://www.nike.cl/checkout/#/cart';var jscheckoutAddUrl = 'https://www.nike.cl/checkout/cart/add';var jscheckoutGiftListId = '';var jsnomeSite = 'nikeclprod';var jsnomeLoja = 'nikeclprod';var jssalesChannel = '1';var defaultStoreCurrency = '$';var localeInfo = {"CountryCode":"CHL","CultureCode":"es-CL","CurrencyLocale":{"RegionDisplayName":"Chile","RegionName":"CL","RegionNativeName":"Chile","TwoLetterIsoRegionName":"CL","CurrencyEnglishName":"Chilean Peso","CurrencyNativeName":"Peso","CurrencySymbol":"$","ISOCurrencySymbol":"CLP","Locale":1146,"Format":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":",","CurrencyGroupSeparator":".","CurrencyGroupSize":3,"StartsWithCurrencySymbol":true},"FlagUrl":"http://www.geonames.org/flags/x/cl.gif"}};</script> 
+<script type="text/javascript" language="javascript">vtxctx = {"skus":"37209;37210;37211;37212;37213;37214;37215;37216;37217;37218;37219;37220;37221","searchTerm":"","categoryId":"27","categoryName":"calzado","departmentyId":"6","departmentName":"snkrs","isOrder":"0","isCheck":"0","isCart":"0","actionType":"","actionValue":"","login":"e6a81ec0-3142-40d5-a03e-258a735c3641","url":"www.nike.cl","transurl":"www.nike.cl"};</script> 
+<script language="javascript" src="https://io.vtex.com.br/front-libs/jquery/1.8.3/jquery-1.8.3.min.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/swfobject.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/vtex.ajax.wait.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/vtex.common.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://vtex.vtexassets.com/_v/public/assets/v1/npm/@vtex/render-extension-loader@0.1.6/lib/render-extension-loader.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/rc/rc.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/vtex.tagmanager.helper.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/portal-ui/v1.14.14/scripts/vtex-events-all.min.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/portal-ui/v1.14.14/scripts/vtex-analytics.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/front-libs/front-i18n/0.7.2/vtex-i18n.min.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/front-libs/front-utils/3.0.8/underscore-extensions.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/currency-format.min.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/front-libs/dustjs-linkedin/2.3.5/dust-core-2.3.5.min.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/portal-plugins/2.9.13/js/catalog-sdk.min.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/vtex.js/v2.13.0/vtex.min.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/jquery.ui.core.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/autocomplete/jquery.ui.widget.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/autocomplete/jquery.ui.position.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/autocomplete/jquery.ui.autocomplete.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/vtex.commerce.search.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/vtex.viewpart.fulltextsearchbox.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/portal-plugins/2.9.13/js/portal-minicart-with-template.min.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/vtex-id-ui/3.25.0/vtexid-jquery.min.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/jquery.jqzoom-core.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/portal-plugins/2.9.13/js/portal-price-with-template2.min.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/portal-plugins/2.9.13/js/portal-sku-selector-with-template.min.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/portal-plugins/2.9.13/js/portal-buy-button.min.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/portal-plugins/2.9.13/js/portal-notify-me-with-template.min.js?v=1.5.49.2459"   type="text/javascript"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" /><link rel="stylesheet" href="//www.nike.com/assets/ncss/glyphs/2.5/css/glyphs.min.css" /><link rel="stylesheet" type="text/css" href="/arquivos/owl-carousel.css?v=637654091652400000" /><link rel="stylesheet" type="text/css" href="/arquivos/jquery.fancybox.css?v=637654098632670000" /><link rel="stylesheet" type="text/css" href="/arquivos/owl-theme-desktop.css?v=637654091654730000" /><link rel="stylesheet" type="text/css" href="/arquivos/brandlive-desktop.css?v=637847691422670000" /><script>
+  //<![CDATA[
+  var customCanonicalTag = document.createElement('link');
+  customCanonicalTag.rel = "canonical";
+  customCanonicalTag.href = window.location.href;
+  document.head.appendChild(customCanonicalTag);
+  //]]></script><meta name="facebook-domain-verification" content="bbi7z6vyqht1gg08ku5ofqhutiyp1g" /><meta name="google-site-verification" content="_q2nGoL9gesAxVIjgiMPb8KBfChezO3z3H8vbtE9pE4" /><meta name="google-site-verification" content="kNY3WUHRZ2xucYuT2BOYNEGoGwbRh3eHF_rCme9ouqo" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="language" content="es-cl" /><meta name="robots" content="index,follow" /><meta content="es-cl" http-equiv="content-language" /><meta name="theme-color" content="#f5f5f5" /><meta name="application-name" content="Nike" /><meta name="apple-mobile-web-app-title" content="Nike" /><meta name="msapplication-config" content="/files/browserconfig.xml" /><link rel="icon" type="image/png" sizes="32x32" href="/arquivos/favicon.png?v=637671335585370000" /><link rel="manifest" href="/files/manifest.json" /><script src="/arquivos/owl-carousel-2-3-4.min.js?v=637654165186900000"></script><script src="/arquivos/jquery.fancybox.js?v=637654165330500000"></script><script type="text/javascript">
+    ambient ="production";
+</script><script src="/arquivos/brandlive-toolbox.min.js?v=637654165092100000"></script><script src="/arquivos/brandlive-desktop.min.js?v=99999999999"></script>
+  <!--
+  - Info Cuotas
+  - Usage: <vtex.cmc:infocuotas />
+  - Name: infocuotas
+  - Tag: infocuotas
+  - Type: HTML
+-->
+  <script type="text/javascript">
+  /*
+   * estadoCuotas = [Número] Si se muestra o no el control de cuotas con el texto.
+   * -- 1 = Prendido / 0 = Apagado
+   *
+   * infoCuotas = [Texto] Este es el texto que se va a mostrar debajo
+   * del control de cuotas. Solo es texto plano con diferencia de mayúsculas y minúsculas.
+   * Si no se quiere mostrar nada, solo se debe dejar vacío.
+  */
+  var estadoCuotas = 1;
+  var infoCuotas = '';
+</script>
+<link rel="stylesheet" href="/arquivos/complexSearch.css?v=637768963475800000">
+
+<!-- --------------------------- Complex Search ---------------------------- -->
+<div class="complexSearch__Wrapper">
+
+  <div class="complexSearch__Categories"></div>
+  <!-- Listed Categories -->
+
+  <div class="complexSearch__Products">
+    <h5>Productos sugeridos</h5>
+    <div class="complexSearch__Products__List"></div>
+  </div>
+  <!-- Listed Products -->
+
+  <div class="complexSearch__Messages">
+
+    <div class="complexSearch__Messages__NoResults">
+      No encontramos resultados para tu búsqueda
+    </div>
+
+    <div class="complexSearch__Messages__ViewAll">
+      <a class="complex__results">Ver todos los resultados</a>
+    </div>
+
+  </div>
+  <!-- Messages -->
+
+</div>
+<!-- --------------------------- Complex Search ---------------------------- -->
+
+<script src="/arquivos/searchComplex.min.js?v=637768959282570000"></script><!-- ATENÇÃO, esse erro prejudica a performance do seu site, o conteudo de nome searchcomplex não foi renderizado por nao ser um XDocument válido, erro: - An XML comment cannot contain '--', and '-' cannot be the last character. Line 3, position 6.--><!-- --------------------------- WishList Modal ---------------------------- -->
+<style>
+  /* Setup Styles */
+  .wishList__Wrapper,
+  .wishList__Overlay {
+    /* Hide Until Called */
+    display: none;
+  }
+</style>
+<div class="wishList__Wrapper">
+
+  <a href="#" class="wishList__Close">x</a>
+  <!-- Close Button -->
+
+  <div class="wishList__CreateList">
+
+    <h1>¡Crea una lista de favoritos!</h1>
+
+    <div class="wishList__CreateList__Input">
+      <label for="wishList__CreateList__Input">Nombre de la lista</label>
+      <input id="wishList__CreateList__Input" type="text">
+      <span class="wishList__CreateList__Input__Error">Ingresá un nombre para tu lista.</span>
+    </div>
+    <!-- Input -->
+
+    <a href="#" class="wishList__CreateList_Create">Crear</a>
+
+  </div>
+  <!-- Create List -->
+
+  <div class="wishList__Lists">
+
+    <hr><!-- Divider -->
+
+    <h1>Mis listas</h1>
+
+    <div class="wishList__Lists__Message">Agrega el producto a una de tus listas existentes!</div>
+
+    <div class="wishList__Lists__Wrapper">
+    </div>
+    <!-- Lists Wrapper -->
+
+    <span class="wishList__Lists__Error">Elegí una lista.</span>
+
+    <a href="#" class="wishList__Lists_Delete">Borrar Lista</a>
+    <a href="#" class="wishList__Lists_Confirm">Agregar</a>
+    <a href="#" class="wishList__Lists_Delete_Product">Quitar Producto</a>
+
+
+  </div>
+  <!-- Lists -->
+
+</div>
+<!-- Modal / Full Wrapper -->
+
+<div class="wishList__Overlay"></div> <!-- Modal / Background Overlay -->
+<!-- --------------------------- WishList Modal ---------------------------- --><!-- ATENÇÃO, esse erro prejudica a performance do seu site, o conteudo de nome wishlistmodal não foi renderizado por nao ser um XDocument válido, erro: - An XML comment cannot contain '--', and '-' cannot be the last character. Line 1, position 12.--><!-- Comparative color table -->
+  <!--
+  - Color Table
+  - Usage: <vtex.cmc:colortable />
+  - Name: colortable
+  - Tag: colortable
+  - Type: HTML
+-->
+  <script type="text/javascript">
+  // IMPORTANTE: Todo es Case Sensitive
+  // Nombre del atributo al que corresponde el color picker
+  colorField = 'color';
+  
+  // Tabla de valores, respetar el formato:
+  // Ejemplo:
+  // 'NombreDelColor' : '#ValorHexadecimal' | 'NombreDelColor' : 'imagen.extension',
+  colorTable = {
+    'Azul'  :	'#0040ff',
+    'Azul Claro'  :	'#0040ff',
+    'Azul Oscuro' :	'#08088A',
+    'Beige'		    :	'#F4CE9D',
+    'Celeste'	    :	'#81BEF7',
+    'Turquesa'	  :	'#01DFD7',
+    'Amarillo'	  :	'#FFFF00',
+    'Gris Claro'  :	'#EEEEEE',
+    'Gris'        :	'#A4A4A4',
+    'Gris Oscuro' :	'#2E2E2E',
+    'Blanco'	    :	'#FFFFFF',
+    'Rojo'  		  :	'#FF0000',
+    'Bordo'	  	  :	'#960F0F',
+    'Natural' 	  :	'#FBE8D0',
+    'Marrón'  	  :	'#B45F04',
+    'Naranja' 	  :	'#FF9F00',
+    'Salmón'  	  :	'#FE2E2E',
+    'Rosa'	  	  :	'#F5A9E1',
+    'Fucsia'	    :	'#FE2E64',
+    'Verde':	'#00FF00',
+    'Verde Claro' :	'#9FF781',
+    'Verde Oscuro':	'#088A08',
+    'Petróleo'	  :	'#2A6146',
+    'Violeta'	    :	'#610B4B',
+    'Lila'  		  :	'#BE81F7',
+    'Camel'  		  :	'#C19A6B',
+    'Crudo'  		  :	'#C2B280',
+    'Plateado'	  :	'#8A9597',
+    'Reptil'  	  :	'#69804D',
+    'Multicolor'  :	'multicolor.png',
+    'Negro'	  	  :	'#000000'
+  }
+</script>
+<script language="javascript">var ___scriptPathTransac = '';</script><script language="javascript">var ___scriptPath = '';</script>
+<!-- Start - WebAnalyticsViewPart -->
+<script> var defaultUtmFromFolder = '';</script>
+<!-- CommerceContext.Current.VirtualFolder.Name: @Produto@ -->
+
+<script>
+vtex.events.addData({"pageCategory":"Product","pageDepartment":"snkrs","pageUrl":"http://www.nike.cl/555088-161-air-jordan-1-retro-high-og/p","pageTitle":"Air Jordan 1 Retro High Og - Calzado - Snkrs - Nike Chile","skuStockOutFromShelf":[],"skuStockOutFromProductDetail":["37220","37221"],"shelfProductIds":[],"accountName":"nikeclprod","pageFacets":[],"productId":"4262","productReferenceId":"555088-161","skuStocks":{"37209":9,"37210":20,"37211":26,"37212":33,"37213":45,"37214":19,"37215":28,"37216":9,"37217":8,"37218":3,"37219":1,"37220":0,"37221":0},"productName":"Air Jordan 1","productBrandId":2000002,"productBrandName":"SNKRS","productDepartmentId":6,"productDepartmentName":"snkrs","productCategoryId":27,"productCategoryName":"calzado","productListPriceFrom":"159990","productListPriceTo":"159990","productPriceFrom":"159990","productPriceTo":"159990","sellerId":"1","sellerIds":"1"});
+</script>
+
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                            '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                            })(window,document,'script','dataLayer','GTM-W5BC5TC');
+</script>
+
+<script>
+var helper = new vtexTagManagerHelper('productView'); helper.init();
+</script>
+
+<!-- End - WebAnalyticsViewPart -->
+<script>var skuJson_0 = {"productId":4262,"name":"Air Jordan 1","salesChannel":"1","available":true,"displayMode":"especificacao","dimensions":["talle","color"],"dimensionsInputType":{"talle":"Radio","color":"Radio"},"dimensionsMap":{"talle":["7","7.5","8","8.5","9","9.5","10","10.5","11","11.5","12","12.5","13"],"color":["Blanco"]},"skus":[{"sku":37209,"skuname":"Talla: 7 - Color: Blanco","dimensions":{"talle":"7","color":"Blanco"},"available":true,"availablequantity":9,"cacheVersionUsedToCallCheckout":"2C974E309994565EE62CF21C41BE8543_","listPriceFormated":"$ 0,00","fullSellingPrice":"$ 159.990,00","listPrice":0,"taxFormated":"$ 0,00","taxAsInt":0,"bestPriceFormated":"$ 159.990,00","bestPrice":15999000,"spotPrice":15999000,"installments":6,"installmentsValue":2666500,"installmentsInsterestRate":0,"image":"https://nikeclprod.vteximg.com.br/arquivos/ids/430638-1000-1000/555088_161_A_PREM.jpg?v=637842644431430000","sellerId":"1","seller":"Nike Chile","measures":{"cubicweight":0.2083,"height":10.0000,"length":10.0000,"weight":2000.0000,"width":10.0000},"unitMultiplier":1.0000,"rewardValue":0},{"sku":37210,"skuname":"Talla: 7.5 - Color: Blanco","dimensions":{"talle":"7.5","color":"Blanco"},"available":true,"availablequantity":99999,"cacheVersionUsedToCallCheckout":"2C974E309994565EE62CF21C41BE8543_","listPriceFormated":"$ 0,00","fullSellingPrice":"$ 159.990,00","listPrice":0,"taxFormated":"$ 0,00","taxAsInt":0,"bestPriceFormated":"$ 159.990,00","bestPrice":15999000,"spotPrice":15999000,"installments":6,"installmentsValue":2666500,"installmentsInsterestRate":0,"image":"https://nikeclprod.vteximg.com.br/arquivos/ids/430639-1000-1000/555088_161_A_PREM.jpg?v=637842644443170000","sellerId":"1","seller":"Nike Chile","measures":{"cubicweight":0.2083,"height":10.0000,"length":10.0000,"weight":2000.0000,"width":10.0000},"unitMultiplier":1.0000,"rewardValue":0},{"sku":37211,"skuname":"Talla: 8 - Color: Blanco","dimensions":{"talle":"8","color":"Blanco"},"available":true,"availablequantity":99999,"cacheVersionUsedToCallCheckout":"2C974E309994565EE62CF21C41BE8543_","listPriceFormated":"$ 0,00","fullSellingPrice":"$ 159.990,00","listPrice":0,"taxFormated":"$ 0,00","taxAsInt":0,"bestPriceFormated":"$ 159.990,00","bestPrice":15999000,"spotPrice":15999000,"installments":6,"installmentsValue":2666500,"installmentsInsterestRate":0,"image":"https://nikeclprod.vteximg.com.br/arquivos/ids/430640-1000-1000/555088_161_A_PREM.jpg?v=637842644454900000","sellerId":"1","seller":"Nike Chile","measures":{"cubicweight":0.2083,"height":10.0000,"length":10.0000,"weight":2000.0000,"width":10.0000},"unitMultiplier":1.0000,"rewardValue":0},{"sku":37212,"skuname":"Talla: 8.5 - Color: Blanco","dimensions":{"talle":"8.5","color":"Blanco"},"available":true,"availablequantity":99999,"cacheVersionUsedToCallCheckout":"2C974E309994565EE62CF21C41BE8543_","listPriceFormated":"$ 0,00","fullSellingPrice":"$ 159.990,00","listPrice":0,"taxFormated":"$ 0,00","taxAsInt":0,"bestPriceFormated":"$ 159.990,00","bestPrice":15999000,"spotPrice":15999000,"installments":6,"installmentsValue":2666500,"installmentsInsterestRate":0,"image":"https://nikeclprod.vteximg.com.br/arquivos/ids/430641-1000-1000/555088_161_A_PREM.jpg?v=637842644467100000","sellerId":"1","seller":"Nike Chile","measures":{"cubicweight":0.2083,"height":10.0000,"length":10.0000,"weight":2000.0000,"width":10.0000},"unitMultiplier":1.0000,"rewardValue":0},{"sku":37213,"skuname":"Talla: 9 - Color: Blanco","dimensions":{"talle":"9","color":"Blanco"},"available":true,"availablequantity":99999,"cacheVersionUsedToCallCheckout":"2C974E309994565EE62CF21C41BE8543_","listPriceFormated":"$ 0,00","fullSellingPrice":"$ 159.990,00","listPrice":0,"taxFormated":"$ 0,00","taxAsInt":0,"bestPriceFormated":"$ 159.990,00","bestPrice":15999000,"spotPrice":15999000,"installments":6,"installmentsValue":2666500,"installmentsInsterestRate":0,"image":"https://nikeclprod.vteximg.com.br/arquivos/ids/430642-1000-1000/555088_161_A_PREM.jpg?v=637842644479930000","sellerId":"1","seller":"Nike Chile","measures":{"cubicweight":0.2083,"height":10.0000,"length":10.0000,"weight":2000.0000,"width":10.0000},"unitMultiplier":1.0000,"rewardValue":0},{"sku":37214,"skuname":"Talla: 9.5 - Color: Blanco","dimensions":{"talle":"9.5","color":"Blanco"},"available":true,"availablequantity":99999,"cacheVersionUsedToCallCheckout":"2C974E309994565EE62CF21C41BE8543_","listPriceFormated":"$ 0,00","fullSellingPrice":"$ 159.990,00","listPrice":0,"taxFormated":"$ 0,00","taxAsInt":0,"bestPriceFormated":"$ 159.990,00","bestPrice":15999000,"spotPrice":15999000,"installments":6,"installmentsValue":2666500,"installmentsInsterestRate":0,"image":"https://nikeclprod.vteximg.com.br/arquivos/ids/430643-1000-1000/555088_161_A_PREM.jpg?v=637842644491670000","sellerId":"1","seller":"Nike Chile","measures":{"cubicweight":0.2083,"height":10.0000,"length":10.0000,"weight":2000.0000,"width":10.0000},"unitMultiplier":1.0000,"rewardValue":0},{"sku":37215,"skuname":"Talla: 10 - Color: Blanco","dimensions":{"talle":"10","color":"Blanco"},"available":true,"availablequantity":99999,"cacheVersionUsedToCallCheckout":"2C974E309994565EE62CF21C41BE8543_","listPriceFormated":"$ 0,00","fullSellingPrice":"$ 159.990,00","listPrice":0,"taxFormated":"$ 0,00","taxAsInt":0,"bestPriceFormated":"$ 159.990,00","bestPrice":15999000,"spotPrice":15999000,"installments":6,"installmentsValue":2666500,"installmentsInsterestRate":0,"image":"https://nikeclprod.vteximg.com.br/arquivos/ids/430644-1000-1000/555088_161_A_PREM.jpg?v=637842644503070000","sellerId":"1","seller":"Nike Chile","measures":{"cubicweight":0.2083,"height":10.0000,"length":10.0000,"weight":2000.0000,"width":10.0000},"unitMultiplier":1.0000,"rewardValue":0},{"sku":37216,"skuname":"Talla: 10.5 - Color: Blanco","dimensions":{"talle":"10.5","color":"Blanco"},"available":true,"availablequantity":9,"cacheVersionUsedToCallCheckout":"2C974E309994565EE62CF21C41BE8543_","listPriceFormated":"$ 0,00","fullSellingPrice":"$ 159.990,00","listPrice":0,"taxFormated":"$ 0,00","taxAsInt":0,"bestPriceFormated":"$ 159.990,00","bestPrice":15999000,"spotPrice":15999000,"installments":6,"installmentsValue":2666500,"installmentsInsterestRate":0,"image":"https://nikeclprod.vteximg.com.br/arquivos/ids/430645-1000-1000/555088_161_A_PREM.jpg?v=637842644514770000","sellerId":"1","seller":"Nike Chile","measures":{"cubicweight":0.2083,"height":10.0000,"length":10.0000,"weight":2000.0000,"width":10.0000},"unitMultiplier":1.0000,"rewardValue":0},{"sku":37217,"skuname":"Talla: 11 - Color: Blanco","dimensions":{"talle":"11","color":"Blanco"},"available":true,"availablequantity":8,"cacheVersionUsedToCallCheckout":"2C974E309994565EE62CF21C41BE8543_","listPriceFormated":"$ 0,00","fullSellingPrice":"$ 159.990,00","listPrice":0,"taxFormated":"$ 0,00","taxAsInt":0,"bestPriceFormated":"$ 159.990,00","bestPrice":15999000,"spotPrice":15999000,"installments":6,"installmentsValue":2666500,"installmentsInsterestRate":0,"image":"https://nikeclprod.vteximg.com.br/arquivos/ids/430646-1000-1000/555088_161_A_PREM.jpg?v=637842644526700000","sellerId":"1","seller":"Nike Chile","measures":{"cubicweight":0.2083,"height":10.0000,"length":10.0000,"weight":2000.0000,"width":10.0000},"unitMultiplier":1.0000,"rewardValue":0},{"sku":37218,"skuname":"Talla: 11.5 - Color: Blanco","dimensions":{"talle":"11.5","color":"Blanco"},"available":true,"availablequantity":3,"cacheVersionUsedToCallCheckout":"2C974E309994565EE62CF21C41BE8543_","listPriceFormated":"$ 0,00","fullSellingPrice":"$ 159.990,00","listPrice":0,"taxFormated":"$ 0,00","taxAsInt":0,"bestPriceFormated":"$ 159.990,00","bestPrice":15999000,"spotPrice":15999000,"installments":6,"installmentsValue":2666500,"installmentsInsterestRate":0,"image":"https://nikeclprod.vteximg.com.br/arquivos/ids/430647-1000-1000/555088_161_A_PREM.jpg?v=637842644538430000","sellerId":"1","seller":"Nike Chile","measures":{"cubicweight":0.2083,"height":10.0000,"length":10.0000,"weight":2000.0000,"width":10.0000},"unitMultiplier":1.0000,"rewardValue":0},{"sku":37219,"skuname":"Talla: 12 - Color: Blanco","dimensions":{"talle":"12","color":"Blanco"},"available":true,"availablequantity":1,"cacheVersionUsedToCallCheckout":"2C974E309994565EE62CF21C41BE8543_","listPriceFormated":"$ 0,00","fullSellingPrice":"$ 159.990,00","listPrice":0,"taxFormated":"$ 0,00","taxAsInt":0,"bestPriceFormated":"$ 159.990,00","bestPrice":15999000,"spotPrice":15999000,"installments":6,"installmentsValue":2666500,"installmentsInsterestRate":0,"image":"https://nikeclprod.vteximg.com.br/arquivos/ids/430648-1000-1000/555088_161_A_PREM.jpg?v=637842644550200000","sellerId":"1","seller":"Nike Chile","measures":{"cubicweight":0.2083,"height":10.0000,"length":10.0000,"weight":2000.0000,"width":10.0000},"unitMultiplier":1.0000,"rewardValue":0},{"sku":37220,"skuname":"Talla: 12.5 - Color: Blanco","dimensions":{"talle":"12.5","color":"Blanco"},"available":false,"availablequantity":0,"cacheVersionUsedToCallCheckout":null,"listPriceFormated":"$ 0,00","fullSellingPrice":"$ 9.999.876,00","listPrice":0,"taxFormated":"$ 0,00","taxAsInt":0,"bestPriceFormated":"$ 9.999.876,00","bestPrice":999987600,"spotPrice":999987600,"installments":0,"installmentsValue":0,"installmentsInsterestRate":null,"image":"https://nikeclprod.vteximg.com.br/arquivos/ids/430649-1000-1000/555088_161_A_PREM.jpg?v=637842644563870000","sellerId":"1","seller":"Nike Chile","measures":{"cubicweight":0.2083,"height":10.0000,"length":10.0000,"weight":2000.0000,"width":10.0000},"unitMultiplier":1.0000,"rewardValue":0},{"sku":37221,"skuname":"Talla: 13 - Color: Blanco","dimensions":{"talle":"13","color":"Blanco"},"available":false,"availablequantity":0,"cacheVersionUsedToCallCheckout":null,"listPriceFormated":"$ 0,00","fullSellingPrice":"$ 9.999.876,00","listPrice":0,"taxFormated":"$ 0,00","taxAsInt":0,"bestPriceFormated":"$ 9.999.876,00","bestPrice":999987600,"spotPrice":999987600,"installments":0,"installmentsValue":0,"installmentsInsterestRate":null,"image":"https://nikeclprod.vteximg.com.br/arquivos/ids/430650-1000-1000/555088_161_A_PREM.jpg?v=637842644576670000","sellerId":"1","seller":"Nike Chile","measures":{"cubicweight":0.2083,"height":10.0000,"length":10.0000,"weight":2000.0000,"width":10.0000},"unitMultiplier":1.0000,"rewardValue":0}]};CATALOG_SDK.setProductWithVariationsCache(skuJson_0.productId, skuJson_0); var skuJson = skuJson_0;</script></head>
+  <body id="product-page" class="snkrs"><div class="ajax-content-loader" rel="/no-cache/callcenter/disclaimer"></div><div class="attributes-wrapper"><div id="caracteristicas"><h4 class="group Especificaciones">Especificaciones</h4><table cellspacing="0" class="group Especificaciones"><tr class="even"><th class="name-field Disciplina">Disciplina</th><td class="value-field Disciplina">estilo de vida, jordan</td></tr><tr ><th class="name-field releaseHour">releaseHour</th><td class="value-field releaseHour">20:00:00</td></tr><tr class="even"><th class="name-field guiadetalles">guiadetalles</th><td class="value-field guiadetalles">calzado-hombre</td></tr><tr ><th class="name-field bloqueo_de_compra">bloqueo_de_compra</th><td class="value-field bloqueo_de_compra">si</td></tr><tr class="even"><th class="name-field Genero">Género</th><td class="value-field Genero">hombre</td></tr><tr ><th class="name-field Marca">Marca</th><td class="value-field Marca">snkrs</td></tr><tr class="even"><th class="name-field Linea">Línea</th><td class="value-field Linea">jordan, Air Jordan 1</td></tr><tr ><th class="name-field Tipo-de-producto">Tipo de producto</th><td class="value-field Tipo-de-producto">calzado</td></tr><tr class="even"><th class="name-field Exclusivo-para-miembros">Exclusivo para miembros</th><td class="value-field Exclusivo-para-miembros">SI</td></tr><tr ><th class="name-field Es-sneakers">Es-sneakers</th><td class="value-field Es-sneakers">si</td></tr><tr class="even"><th class="name-field Edad">Edad</th><td class="value-field Edad">adultos</td></tr></table></div></div><header id="header"><div class="hidden" style="display: none;"><div class="container"><div id="search"><div class="top-nav"><a id="close-search" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="58" height="21" viewBox="0 0 58 21"><g><g><path d="M16.033 11.648c-3.514.94-6.356.818-7.935-.367-4.146-3.148-.988-9.403.157-11.284C6.242 2.287 4.228 4.576 2.65 7.07.202 10.994-.864 15.287.794 18.026c3 4.988 10.146 2.698 14.726.695L58 .161z" /></g></g></svg></a></div><!-- Upper Navigation --><div class="search__head"><form action="?" method="post" role="search" disabled="disabled"><button type="button" class="search__btn"><svg class="pre-search-input-icon" fill="#111" height="30px" width="19px" viewBox="0 0 24 24"><path d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.39zM11 18a7 7 0 1 1 7-7 7 7 0 0 1-7 7z"></path></svg></button><input type="text" name="search" id="search-custom" placeholder="Buscar" autocomplete="off" required="required" class="search__field" /><button id="deleteButton" class="delete"><svg class="search-clear-icon" fill="#111" height="30px" width="30px" viewBox="0 0 24 24"><path d="M22 20H7.3c-.3 0-.6-.1-.8-.4l-5.3-7c-.3-.4-.3-.9 0-1.2l5.3-7c.2-.3.5-.4.8-.4H22c.6 0 1 .4 1 1v14c0 .6-.4 1-1 1zM7.8 18H21V6H7.8l-4.6 6 4.6 6zm8.2-3c-.3 0-.5-.1-.7-.3L14 13.4l-1.3 1.3c-.4.4-1 .4-1.4 0s-.4-1 0-1.4l1.3-1.3-1.3-1.3c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l1.3 1.3 1.3-1.3c.4-.4 1-.4 1.4 0s.4 1 0 1.4L15.4 12l1.3 1.3c.4.4.4 1 0 1.4-.2.2-.5.3-.7.3z"></path></svg></button></form></div><div class="hidden"><script type="text/javascript" language="javascript"> /*<![CDATA[*/ $(document).ready(function(){currentDept = '0'; enableFullTextSearchBox('ftBoxa50deb38eb634e4299e2ca77847639f2', 'ftDepta50deb38eb634e4299e2ca77847639f2', 'ftIdxa50deb38eb634e4299e2ca77847639f2', 'ftBtna50deb38eb634e4299e2ca77847639f2', '/SEARCHTERM','Ingresa Aquí' );}); /*]]>*/ </script><fieldset class="busca"><legend>Buscar</legend><label>Buscar</label><select id="ftDepta50deb38eb634e4299e2ca77847639f2"><option value="">Todo o Site</option><option value="1">Category</option><option value="2">nike</option><option value="6">snkrs</option></select><input type="hidden" id=ftIdxa50deb38eb634e4299e2ca77847639f2 value="" /><input id="ftBoxa50deb38eb634e4299e2ca77847639f2" class="fulltext-search-box" type="text" size="20" accesskey="b" /><input id="ftBtna50deb38eb634e4299e2ca77847639f2" type="button" value="Buscar" class="btn-buscar" /></fieldset></div><div class="extra"><div class="popular"><h2>Búsquedas Populares</h2><ul><li><a href="/camisa">Camisa</a><a href="/pantalon">Pantalón</a><a href="/remera">Remera</a><a href="/jean">Jean</a><a href="/cartera">Cartera</a></li></ul></div><!--Popular Searches --></div><!-- Extra Communications Space --></div><!-- Search --><div id="mini-cart-control"><div class="portal-totalizers-ref"></div><script>$('.portal-totalizers-ref').minicart({ showMinicart: false, showTotalizers: true, showShippingOptions: false });</script><div class="portal-minicart-ref"></div><script>$('.portal-minicart-ref').minicart({ showMinicart: true, showTotalizers: false  , showShippingOptions: false });</script></div><!-- VTEX MiniCart Control --><div id="mini-cart-holder-full"><div class="header"><div class="title">
+            Mi compra
+            <span class="quantity"></span></div><!-- Title --><a class="close" href="#"></a></div><!-- Header --><div class="items"></div><!-- Products --><div class="footer"><div class="totals"><span class="info">Subtotal</span><span class="money"></span></div><!-- Totals --><div class="actions"><a class="btn" href="/checkout/#/cart">Iniciar Compra</a><!-- <a href="/checkout/#/cart">Ir al carrito de compras</a> --></div><!-- Actions --></div><!-- Footer --></div><!-- #mini-cart-holder --></div></div><div class="header_snkrs"><div class="content-top"><div class="container"><div class="getback"><a href="/">Visitar Nike.cl</a></div><div class="logintop"><a class="myorders guestuser" title="Registrarme">Registrarme</a><a class="myorders guestuser last" title="Login">Login</a><a class="myorders logged_in" href="/account"><div><script>
+                                    $(document).ready(function () {
+                                        vtexid.setScope('461d783e-3521-49e0-8222-8f5b3f9e2907');
+                                        vtexid.setScopeName('nikeclprod');
+                                        $('body').on('click', '#login', function () {
+                                            vtexid.start(
+                                                    {
+                                                        returnUrl: '/555088-161-air-jordan-1-retro-high-og/p',
+                                                        userEmail: '',
+                                                        locale: 'es-CL',
+                                                        forceReload: false
+                                                    });
+                                        });
+                                    });
+                                   </script><div class="ajax-content-loader" rel="/no-cache/user/welcome"></div></div></a><a id="mini-cart-link" href="/checkout/#/cart"><svg width="24px" height="24px" fill="#111" viewBox="0 0 24 24"><path d="M16 7a1 1 0 0 1-1-1V3H9v3a1 1 0 0 1-2 0V3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3a1 1 0 0 1-1 1z"></path><path d="M20 5H4a2 2 0 0 0-2 2v13a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a2 2 0 0 0-2-2zm0 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7h16z"></path></svg><span class="quantity"></span></a></div></div></div><div class="content-bottom"><div class="container"><div class="logosnkrs"><a href="/snkrs"><img src="/arquivos/logo-snkrs.png?v=637654166307200000" /></a></div><ul id="links"><li><a class="noticias" href="/snkrs">Noticias</a></li><li><a class="disponibles" href="/snkrs/disponibles">Disponibles</a></li><li><a class="futuros" href="/snkrs/futuros">Futuros</a></li></ul><!-- Tab links --><div class="changesize"><button class="smallprod"><svg width="18px" height="18px" fill="#757575" class="feed-icon" viewBox="0 0 24 24"><path d="M0 18.64h24V24H0v-5.36zM0 0h24v16H0V0z"></path></svg></button><button class="bigprod"><svg width="18px" height="18px" fill="#757575" class="grid-icon" viewBox="0 0 24 24"><path d="M0 13.36h10.64V24H0V13.36zM13.36 0H24v10.64H13.36V0zm0 13.36H24V24H13.36V13.36zM0 0h10.64v10.64H0V0z"></path></svg></button></div></div></div></div></header><!-- Header --><div class="page"><div class="container"><div class="product-details"><div class="image-wrapper"><div class="apresentacao">
+<div id="setaThumbs"></div>
+<div id="show">
+<div id="include">
+<div id="image" productIndex="0">
+<a href="https://nikeclprod.vteximg.com.br/arquivos/ids/430638-1000-1000/555088_161_A_PREM.jpg?v=637842644431430000" class="image-zoom"><img productIndex="0" id="image-main" class="sku-rich-image-main" src="https://nikeclprod.vteximg.com.br/arquivos/ids/430638-1000-1000/555088_161_A_PREM.jpg?v=637842644431430000" alt="Air-Jordan-1-Retro-High-OG" title="Air-Jordan-1-Retro-High-OG" /></a>
+</div>
+</div>
+<ul class="thumbs"> <li>
+                                                    <a id='botaoZoom' href='javascript:void(0);' title='Zoom' rel='https://nikeclprod.vteximg.com.br/arquivos/ids/430638-1000-1000/555088_161_A_PREM.jpg?v=637842644431430000' zoom='https://nikeclprod.vteximg.com.br/arquivos/ids/430638-1000-1000/555088_161_A_PREM.jpg?v=637842644431430000'>
+                                                        <img src='https://nikeclprod.vteximg.com.br/arquivos/ids/430638-1000-1000/555088_161_A_PREM.jpg?v=637842644431430000' title='Air-Jordan-1-Retro-High-OG' alt='Air-Jordan-1-Retro-High-OG'/>
+                                                    </a>
+                                                </li> <li>
+                                                    <a id='botaoZoom' href='javascript:void(0);' title='Zoom' rel='https://nikeclprod.vteximg.com.br/arquivos/ids/432635-1000-1000/555088_161_B_PREM.jpg?v=637842678679470000' zoom='https://nikeclprod.vteximg.com.br/arquivos/ids/432635-1000-1000/555088_161_B_PREM.jpg?v=637842678679470000'>
+                                                        <img src='https://nikeclprod.vteximg.com.br/arquivos/ids/432635-1000-1000/555088_161_B_PREM.jpg?v=637842678679470000' title='Air-Jordan-1-Retro-High-OG' alt='Air-Jordan-1-Retro-High-OG'/>
+                                                    </a>
+                                                </li> <li>
+                                                    <a id='botaoZoom' href='javascript:void(0);' title='Zoom' rel='https://nikeclprod.vteximg.com.br/arquivos/ids/434620-1000-1000/555088_161_C_PREM.jpg?v=637842716763730000' zoom='https://nikeclprod.vteximg.com.br/arquivos/ids/434620-1000-1000/555088_161_C_PREM.jpg?v=637842716763730000'>
+                                                        <img src='https://nikeclprod.vteximg.com.br/arquivos/ids/434620-1000-1000/555088_161_C_PREM.jpg?v=637842716763730000' title='Air-Jordan-1-Retro-High-OG' alt='Air-Jordan-1-Retro-High-OG'/>
+                                                    </a>
+                                                </li> <li>
+                                                    <a id='botaoZoom' href='javascript:void(0);' title='Zoom' rel='https://nikeclprod.vteximg.com.br/arquivos/ids/436596-1000-1000/555088_161_D_PREM.jpg?v=637842750117400000' zoom='https://nikeclprod.vteximg.com.br/arquivos/ids/436596-1000-1000/555088_161_D_PREM.jpg?v=637842750117400000'>
+                                                        <img src='https://nikeclprod.vteximg.com.br/arquivos/ids/436596-1000-1000/555088_161_D_PREM.jpg?v=637842750117400000' title='Air-Jordan-1-Retro-High-OG' alt='Air-Jordan-1-Retro-High-OG'/>
+                                                    </a>
+                                                </li> <li>
+                                                    <a id='botaoZoom' href='javascript:void(0);' title='Zoom' rel='https://nikeclprod.vteximg.com.br/arquivos/ids/438552-1000-1000/555088_161_E_PREM.jpg?v=637843306106030000' zoom='https://nikeclprod.vteximg.com.br/arquivos/ids/438552-1000-1000/555088_161_E_PREM.jpg?v=637843306106030000'>
+                                                        <img src='https://nikeclprod.vteximg.com.br/arquivos/ids/438552-1000-1000/555088_161_E_PREM.jpg?v=637843306106030000' title='Air-Jordan-1-Retro-High-OG' alt='Air-Jordan-1-Retro-High-OG'/>
+                                                    </a>
+                                                </li> <li>
+                                                    <a id='botaoZoom' href='javascript:void(0);' title='Zoom' rel='https://nikeclprod.vteximg.com.br/arquivos/ids/440420-1000-1000/555088_161_F_PREM.jpg?v=637843357918370000' zoom='https://nikeclprod.vteximg.com.br/arquivos/ids/440420-1000-1000/555088_161_F_PREM.jpg?v=637843357918370000'>
+                                                        <img src='https://nikeclprod.vteximg.com.br/arquivos/ids/440420-1000-1000/555088_161_F_PREM.jpg?v=637843357918370000' title='Air-Jordan-1-Retro-High-OG' alt='Air-Jordan-1-Retro-High-OG'/>
+                                                    </a>
+                                                </li> <li>
+                                                    <a id='botaoZoom' href='javascript:void(0);' title='Zoom' rel='https://nikeclprod.vteximg.com.br/arquivos/ids/443217-1000-1000/555088_161_H_PREM.jpg?v=637843420246530000' zoom='https://nikeclprod.vteximg.com.br/arquivos/ids/443217-1000-1000/555088_161_H_PREM.jpg?v=637843420246530000'>
+                                                        <img src='https://nikeclprod.vteximg.com.br/arquivos/ids/443217-1000-1000/555088_161_H_PREM.jpg?v=637843420246530000' title='Air-Jordan-1-Retro-High-OG' alt='Air-Jordan-1-Retro-High-OG'/>
+                                                    </a>
+                                                </li> <li>
+                                                    <a id='botaoZoom' href='javascript:void(0);' title='Zoom' rel='https://nikeclprod.vteximg.com.br/arquivos/ids/445032-1000-1000/555088_161_K_PREM.jpg?v=637843510505000000' zoom='https://nikeclprod.vteximg.com.br/arquivos/ids/445032-1000-1000/555088_161_K_PREM.jpg?v=637843510505000000'>
+                                                        <img src='https://nikeclprod.vteximg.com.br/arquivos/ids/445032-1000-1000/555088_161_K_PREM.jpg?v=637843510505000000' title='Air-Jordan-1-Retro-High-OG' alt='Air-Jordan-1-Retro-High-OG'/>
+                                                    </a>
+                                                </li></ul></div>
+</div>
+<!--  Component: Product Images --></div><!-- .product-image --><div class="infoproduct-wrapper"><div class="row-desktop-mobile"><div class="productDescriptionShort Air-Jordan-1 ">Herencia</div><div class="name-box"><div class="fn productName  Air-Jordan-1 ">Air Jordan 1</div><input id="___rc-p-id"  type="hidden" value="4262" /><input id="___rc-p-dv-id"  type="hidden" value="159990" /><input id="___rc-p-sku-ids"  type="hidden" value="37209,37210,37211,37212,37213,37214,37215,37216,37217,37218,37219,37220,37221" /><input id="___rc-p-kit-ids"  type="hidden" value="" /></div><!-- .product-name --><div class="price-box"><div class="hidden"><div class="plugin-preco"><p productIndex="0" class="descricao-preco"><em productIndex="0" class="valor-de" style="display:none">De: <strong productIndex="0" class="skuListPrice">$ 0,00</strong></em><em productIndex="0" class="valor-por" >Por: <strong productIndex="0" class="skuBestPrice">$ 159.990,00</strong></em><em productIndex="0" class="valor-dividido" style="display:block"><span><span>ou <label productIndex="0" class="skuBestInstallmentNumber">6</label>X de</span> <strong><label productIndex="0" class="skuBestInstallmentValue">$ 26.665,00</label></strong></span></em><p productIndex="0" class="preco-a-vista" style="display:none">Precio al contado: <strong productIndex="0" class="skuPrice">$ 159.990,00</strong></p></p></div><script>$('.plugin-preco').price(4262);</script></div><div class="cleaned-price"><span class="listPrice"></span><span class="bestPrice"></span><span class="percent"></span></div><div class="installment-controls"><span class="installments"></span><span class="installments text"></span></div><!-- cleaned-price --></div><!-- Price Box --></div><div id="releaseDate"></div><div class="description-box"><div class="productDescription">EL ICÓNICO 1.</br></br> El icónico Air Jordan 1 mantiene su diseño familiar e impecable, pero ahora se renueva para la cultura actual de los amantes del calzado. Esta versión del Retro High OG cuenta con cuero premium, amortiguación cómoda y detalles clásicos de diseño.</br><br>Air en el interior</br>La unidad Air-Sole en el talón proporciona la misma amortiguación ligera que MJ disfrutó durante sus días de juego.</br><br>Cuero de lujo</br>El cuero genuino en la parte superior proporciona durabilidad y estructura con un toque de lujo. La lengüeta de tela se siente suave y cómoda en la parte superior del pie.</br><br>Suela cupsole clásica</br>Vive la grandeza. Estable y firme, la suela cupsole del calzado cuenta con el mismo perfil y detalles de puntada gruesa que el original.</br><br>Datos del producto</br>• Logotipo Wings en el lateral</br>• Etiqueta Nike Air en la lengüeta</br>• Punta perforada</br>• Tracción de goma</br>• Suela de espuma</br>• Este producto no está diseñado para usarse como equipo de protección personal (EPP)</br></div></div><p class="proximamente" style="display: none;">Proximamente</p><div class="sku-selector-box"><div class="stock-disponible" style="display: none"><span class="stock-text"></span><span class="stock-quantity"></span></div><div class="sku-selector-container sku-selector-container-0" /></div><script>$('.sku-selector-container-0').skuSelector(skuJson_0, {selectSingleDimensionsOnOpening: 'true'});</script><!-- fancy guia de talles --><div id="fancytalles" href="guiatalles" class="guia-de-talles"><a href="javascript:void(0);">Guia de talles</a></div></div><!-- .seletor-sku --><div class="access-button-box" style="display: none;"><a class="access">Iniciar sesión para comprar</a></div><div class="buy-button-box"><input size="20" type="text" class="buy-in-page-quantity" value="1" productIndex="0" style="display:block" /><script>
+                        $('.buy-in-page-quantity[productindex=0]').on('change', function(evt){
+                            var el = $(evt.target), qty = +el.val();
+                            if(isNaN(qty)) return;
+                            el.trigger('quantityChanged.vtex', [4262, qty]);
+                        });
+                        $(window).on('vtex.sku.selected', function(evt, productId, sku){
+                            var el = $('.buy-in-page-quantity[productindex=0]');
+                            if(4262 === productId){
+                                if(sku.available){
+                                    el.show();
+                                } else {
+                                    el.hide();
+                                }
+                            }
+                        });
+                        </script>   
+                        <a class="buy-in-page-button" productIndex="0" style="display:block">Comprar</a><script>$('.buy-in-page-button[productindex=0]').buyButton(4262, {salesChannel: 1}, {redirect: false, addMessage: 'Produto adicionado com sucesso!', hideUnavailable: true})</script><p class="unavailable-button" productIndex="0" style="display:none">Produto Esgotado</p><div productIndex="0" class="notifyme" style="display:none"><script>$('.notifyme[productIndex=0]').notifyMe(4262, {strings: {title: 'Avise-Me'}});</script></div></div></div><!-- .product-info --></div><!-- .product-details --></div><div class="despcipcion-compleja-html"></div></div><!-- .container-fluid -->
+  <div id="BDW-PDP-Carrusel-3"></div>
+<footer id="footer"><div id="newsletter" class="newsletter"><h4 class="upperText">Recibe las novedades de Nike</h4><h4 class="bottomText">Suscribete al Newsletter de novedades.</h4><fieldset><input id="email" name="email" type="text" placeholder="Ingresa tu email" /><button id="buttonOk"></button></fieldset></div><div id="footer-bootom"><div class="container"><div class="links"><div class="column info"><a href="/locales"><h5>BUSCAR TIENDA</h5></a><a href="/account" target="_blank"><h5>HAZTE MIEMBRO</h5></a><!--<a href="#" class="contactWidgetLink">Contáctenos</a>--><!-- .row --></div><!-- .col-services --><div class="column help"><a class="has-children" href="/help"><h5>Ayuda</h5></a><ul class="sub-level"><li><a href="/_secure/account#/orders">Estado de mi orden</a></li><li><a href="/help/nota#envio-entrega">Envios y entregas</a></li><li><a href="/help/nota#politica-de-devoluciones">Devoluciones</a></li><li><a href="/help/nota#opciones-pago">Opciones de pago</a></li><li><a href="#" class="chatWidgetLink">Chat</a></li><li><a href="#" class="contactWidgetLink">Contacto</a></li></ul><!-- Sub level --></div><div class="column aboutus"><a class="has-children" href="https://about.nike.com/"><h5>Acerca de Nike</h5></a><ul class="sub-level"><li><a href="https://news.nike.com/">Noticias</a></li><li><a href="https://jobs.nike.com/es/">Empleos</a></li><li><a href="https://investors.nike.com/Home/default.aspx">Inversionistas</a></li><li><a href="https://www.nike.com/sustainability">Sustentabilidad</a></li></ul><!-- Sub level --></div><div class="column oculto"></div><div class="column social"><a class="icon-twitter" href="https://twitter.com/Nike" target="_blank"></a><a class="icon-facebook" href="https://www.facebook.com/nike" target="_blank"></a><a class="icon-youtube" href="https://www.youtube.com/channel/UCUFgkRb0ZHc4Rpq15VRCICA" target="_blank"></a><a class="icon-instagram" href="https://www.instagram.com/nike/" target="_blank"></a></div><!-- Social Links --></div></div><div class="copyright"><div class="container"><div class="left"><div class="selector-country"><a class="country" href="https://www.nike.com/language_tunnel" data-pre="ILink"><svg height="15px" width="18px" fill="#fff" viewBox="0 0 42 58"><path d="M21 0C9.4 0 0 9.5 0 21.2 0 39.9 21 58 21 58s21-18.1 21-36.8C42 9.5 32.6 0 21 0zm0 31c-5.5 0-10-4.5-10-10s4.5-10 10-10 10 4.5 10 10-4.5 10-10 10z"></path></svg><span class="country-pin-label">Chile</span></a></div><span>© 2022 Nike, Inc. Todos los derechos reservados</span></div><div class="right"><!--<a href="/ayuda">Guías</a>--><a href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=termsOfUse&amp;country=cl&amp;language=es-419&amp;requestType=redirect&amp;uxId=5d9f7d5739838be8eb46ae6e7b07e89">Términos de uso</a><a href="/terminos-venta">Términos de venta</a><!--<a href="/ayuda">Detalles de la empresa</a>--><a href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&amp;country=CL&amp;language=es-419&amp;requestType=redirect&amp;uxId=5d9f7d5739838be8eb46ae6e7b07e89">Política de privacidad y cookies</a></div><!-- Left  --></div><!-- CopyRight & Logos --></div><div class="logos_footer"><div class="container"><div class="left"><div class="fiscal"><!--<a target="_blank" href="javascript:void(0);">--><!--    <img src="/arquivos/data-fiscal.png?v=637654166264170000" alt="afip" />--><!--</a>--></div><!-- fiscal --></div></div></div><!-- footer_checkout --></div><div id="newsletter-popup"><a class="close icon-button-close" href="#"></a><h2>Recibí las novedades de Nike</h2><h4>Suscribite al Newsletter de novedades.</h4><fieldset><input id="email" name="email" type="text" placeholder="Ingresá tu email" /><button id="buttonOk"></button></fieldset></div></footer><script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/track.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/thickbox.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/json2.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/vtex.viewpart.callcenterdisclaimer.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/vtex.viewpart.ajaxloader_v2.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/social/vtex-view-part.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/vtex.jsevents.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/vtex.skuevents.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/vtex.skuevents.skudatafetcher.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/vtex.viewpart.imagecontrol3.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script language="javascript" src="https://nikeclprod.vteximg.com.br/scripts/intersect.js?v=1.5.49.2459"   type="text/javascript"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"6fafbbeb8d062891","token":"4f3316f532114c19a35548f5b651d9a5","version":"2021.12.0","si":100}' crossorigin="anonymous"></script>
+</body>
+  <!-- woowup -->
+  <script src="https://assets-cdn.woowup.com/js/webtracking.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    let metadata = {
+        /* Optional: if you need to send metadata put it here */
+    };
+
+    let callback = function () {
+        /* Optional: if you need to call a function after tracking put it here */
+    }
+
+    WU.trackProductVTEX('fII1tUKiG', metadata, callback);
+    
+</script>
+  <!-- fancy guia de talles -->
+  <div style="display:none;">
+    <div id="guiatalles"></div>
+  </div>
+  <div id="seguircomprando" style="display: none;">
+    <h3>Agregado a la bolsa del compra</h3>
+    <!--<vtex.cmc:miniCart />-->
+    <div class="container-prod">
+      <div class="imagen"><div class="apresentacao">
+<div id="setaThumbs"></div>
+<div id="show">
+<div id="include">
+<div id="image" productIndex="0">
+<a href="https://nikeclprod.vteximg.com.br/arquivos/ids/430638-1000-1000/555088_161_A_PREM.jpg?v=637842644431430000" class="image-zoom"><img productIndex="0" id="image-main" class="sku-rich-image-main" src="https://nikeclprod.vteximg.com.br/arquivos/ids/430638-1000-1000/555088_161_A_PREM.jpg?v=637842644431430000" alt="Air-Jordan-1-Retro-High-OG" title="Air-Jordan-1-Retro-High-OG" /></a>
+</div>
+</div>
+<ul class="thumbs"> <li>
+                                                    <a id='botaoZoom' href='javascript:void(0);' title='Zoom' rel='https://nikeclprod.vteximg.com.br/arquivos/ids/430638-1000-1000/555088_161_A_PREM.jpg?v=637842644431430000' zoom='https://nikeclprod.vteximg.com.br/arquivos/ids/430638-1000-1000/555088_161_A_PREM.jpg?v=637842644431430000'>
+                                                        <img src='https://nikeclprod.vteximg.com.br/arquivos/ids/430638-1000-1000/555088_161_A_PREM.jpg?v=637842644431430000' title='Air-Jordan-1-Retro-High-OG' alt='Air-Jordan-1-Retro-High-OG'/>
+                                                    </a>
+                                                </li> <li>
+                                                    <a id='botaoZoom' href='javascript:void(0);' title='Zoom' rel='https://nikeclprod.vteximg.com.br/arquivos/ids/432635-1000-1000/555088_161_B_PREM.jpg?v=637842678679470000' zoom='https://nikeclprod.vteximg.com.br/arquivos/ids/432635-1000-1000/555088_161_B_PREM.jpg?v=637842678679470000'>
+                                                        <img src='https://nikeclprod.vteximg.com.br/arquivos/ids/432635-1000-1000/555088_161_B_PREM.jpg?v=637842678679470000' title='Air-Jordan-1-Retro-High-OG' alt='Air-Jordan-1-Retro-High-OG'/>
+                                                    </a>
+                                                </li> <li>
+                                                    <a id='botaoZoom' href='javascript:void(0);' title='Zoom' rel='https://nikeclprod.vteximg.com.br/arquivos/ids/434620-1000-1000/555088_161_C_PREM.jpg?v=637842716763730000' zoom='https://nikeclprod.vteximg.com.br/arquivos/ids/434620-1000-1000/555088_161_C_PREM.jpg?v=637842716763730000'>
+                                                        <img src='https://nikeclprod.vteximg.com.br/arquivos/ids/434620-1000-1000/555088_161_C_PREM.jpg?v=637842716763730000' title='Air-Jordan-1-Retro-High-OG' alt='Air-Jordan-1-Retro-High-OG'/>
+                                                    </a>
+                                                </li> <li>
+                                                    <a id='botaoZoom' href='javascript:void(0);' title='Zoom' rel='https://nikeclprod.vteximg.com.br/arquivos/ids/436596-1000-1000/555088_161_D_PREM.jpg?v=637842750117400000' zoom='https://nikeclprod.vteximg.com.br/arquivos/ids/436596-1000-1000/555088_161_D_PREM.jpg?v=637842750117400000'>
+                                                        <img src='https://nikeclprod.vteximg.com.br/arquivos/ids/436596-1000-1000/555088_161_D_PREM.jpg?v=637842750117400000' title='Air-Jordan-1-Retro-High-OG' alt='Air-Jordan-1-Retro-High-OG'/>
+                                                    </a>
+                                                </li> <li>
+                                                    <a id='botaoZoom' href='javascript:void(0);' title='Zoom' rel='https://nikeclprod.vteximg.com.br/arquivos/ids/438552-1000-1000/555088_161_E_PREM.jpg?v=637843306106030000' zoom='https://nikeclprod.vteximg.com.br/arquivos/ids/438552-1000-1000/555088_161_E_PREM.jpg?v=637843306106030000'>
+                                                        <img src='https://nikeclprod.vteximg.com.br/arquivos/ids/438552-1000-1000/555088_161_E_PREM.jpg?v=637843306106030000' title='Air-Jordan-1-Retro-High-OG' alt='Air-Jordan-1-Retro-High-OG'/>
+                                                    </a>
+                                                </li> <li>
+                                                    <a id='botaoZoom' href='javascript:void(0);' title='Zoom' rel='https://nikeclprod.vteximg.com.br/arquivos/ids/440420-1000-1000/555088_161_F_PREM.jpg?v=637843357918370000' zoom='https://nikeclprod.vteximg.com.br/arquivos/ids/440420-1000-1000/555088_161_F_PREM.jpg?v=637843357918370000'>
+                                                        <img src='https://nikeclprod.vteximg.com.br/arquivos/ids/440420-1000-1000/555088_161_F_PREM.jpg?v=637843357918370000' title='Air-Jordan-1-Retro-High-OG' alt='Air-Jordan-1-Retro-High-OG'/>
+                                                    </a>
+                                                </li> <li>
+                                                    <a id='botaoZoom' href='javascript:void(0);' title='Zoom' rel='https://nikeclprod.vteximg.com.br/arquivos/ids/443217-1000-1000/555088_161_H_PREM.jpg?v=637843420246530000' zoom='https://nikeclprod.vteximg.com.br/arquivos/ids/443217-1000-1000/555088_161_H_PREM.jpg?v=637843420246530000'>
+                                                        <img src='https://nikeclprod.vteximg.com.br/arquivos/ids/443217-1000-1000/555088_161_H_PREM.jpg?v=637843420246530000' title='Air-Jordan-1-Retro-High-OG' alt='Air-Jordan-1-Retro-High-OG'/>
+                                                    </a>
+                                                </li> <li>
+                                                    <a id='botaoZoom' href='javascript:void(0);' title='Zoom' rel='https://nikeclprod.vteximg.com.br/arquivos/ids/445032-1000-1000/555088_161_K_PREM.jpg?v=637843510505000000' zoom='https://nikeclprod.vteximg.com.br/arquivos/ids/445032-1000-1000/555088_161_K_PREM.jpg?v=637843510505000000'>
+                                                        <img src='https://nikeclprod.vteximg.com.br/arquivos/ids/445032-1000-1000/555088_161_K_PREM.jpg?v=637843510505000000' title='Air-Jordan-1-Retro-High-OG' alt='Air-Jordan-1-Retro-High-OG'/>
+                                                    </a>
+                                                </li></ul></div>
+</div>
+</div>
+      <div class="infoprod"><div class="fn productName  Air-Jordan-1 ">Air Jordan 1</div><input id="___rc-p-id"  type="hidden" value="4262" /><input id="___rc-p-dv-id"  type="hidden" value="159990" /><input id="___rc-p-sku-ids"  type="hidden" value="37209,37210,37211,37212,37213,37214,37215,37216,37217,37218,37219,37220,37221" /><input id="___rc-p-kit-ids"  type="hidden" value="" /><div class="productDescriptionShort Air-Jordan-1 ">Herencia</div><div class="price-box"><div class="plugin-preco"><p productIndex="0" class="descricao-preco"><em productIndex="0" class="valor-de" style="display:none">De: <strong productIndex="0" class="skuListPrice">$ 0,00</strong></em><em productIndex="0" class="valor-por" >Por: <strong productIndex="0" class="skuBestPrice">$ 159.990,00</strong></em><em productIndex="0" class="valor-dividido" style="display:block"><span><span>ou <label productIndex="0" class="skuBestInstallmentNumber">6</label>X de</span> <strong><label productIndex="0" class="skuBestInstallmentValue">$ 26.665,00</label></strong></span></em><p productIndex="0" class="preco-a-vista" style="display:none">Precio al contado: <strong productIndex="0" class="skuPrice">$ 159.990,00</strong></p></p></div><script>$('.plugin-preco').price(4262);</script></div><!-- .price-box --></div>
+      <div class="botones-sigacomprando">
+        <a class="accountnikeplus">Acceder/Hazte Miebro de Nike</a>
+        <a href="/checkout/#/cart" class="btn_siga">Iniciar compra</a>
+      </div>
+    </div>
+  </div>
+</html>

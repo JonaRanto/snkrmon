@@ -1,0 +1,415 @@
+<!DOCTYPE HTML>
+<html lang="es-CL">
+
+<head>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=tFufW2wtY179an6ycoqB8D7qmSvgoBSyIG0gCy1TEO-Xv_JFt-V-67lk8oKHMHg0" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly93d3cubmlrZS5jbC9jaGVja291dC8"/><script type="text/javascript">(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+    '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-W5BC5TC');</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    <title data-i18n="title"></title>
+    <link rel="shortcut icon" href="/arquivos/nikeclprod-favicon.ico">
+    <link rel="apple-touch-icon" href="/arquivos/nikeclprod-apple-touch-icon.png">
+    <meta name="msapplication-TileImage" content="/arquivos/nikeclprod-windows-tile.png" />
+    <link rel="stylesheet" href="//io.vtex.com.br/front-libs/bootstrap/2.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//io.vtex.com.br/front-libs/bootstrap/2.3.2/css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" href="//io.vtex.com.br/front-libs/onda/1.0.0/onda.min.css" />
+    <link rel="stylesheet" href="//io.vtex.com.br/front-libs/font-awesome/3.2.1/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="//io.vtex.com.br/checkout-ui/v6.59.0/lib/front-messages-ui/vtex-message.min.css" />
+    <link rel="stylesheet" href="//io.vtex.com.br/checkout-ui/v6.59.0/style/style.css" />
+    <link href="/arquivos/checkout-custom.css?v=d41d8cd9" rel="stylesheet" type="text/css" />
+    <link href="/files/checkout6-custom.css?v=fb8b67df" rel="stylesheet" type="text/css" id="checkout-custom-css" />
+    <script type="text/javascript" crossorigin="anonymous" src="//io.vtex.com.br/v3/polyfill.min.js?features=Object.values,Object.entries,Object.assign,Array.from,Array.prototype.findIndex,Array.prototype.fill,Array.prototype.find,Array.prototype.includes,String.prototype.startsWith,String.prototype.endsWith,String.prototype.includes,Symbol,fetch,Promise,Map,Number.isInteger,Number.isNaN,Set,Function.name,URL,IntersectionObserver,Intl.~locale.pt-BR,Object.defineProperty&flags=gated"></script>
+    <script type="text/javascript" src="//io.vtex.com.br/front-libs/jquery/1.8.3/jquery-1.8.3.min.js?v=000002"></script>
+    <script type="text/javascript" src="//io.vtex.com.br/front-libs/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//vtex.vtexassets.com/_v/public/assets/v1/npm/@vtex/render-extension-loader@0.2.2/lib/render-extension-loader.min.js"></script>
+    <script type="text/javascript" src="//vtex.vtexassets.com/_v/public/assets/v1/npm/splunk-events@1.7.0/lib/splunk-events.umd.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/2.1.0/es5-shim.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/2.1.0/es5-sham.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="//io.vtex.com.br/checkout-ui/v6.59.0/script/init.js" type="text/javascript"></script>
+    <!--[if IE]>
+    <script type="text/javascript" src="//io.vtex.com.br/checkout-ui/v6.59.0/lib/ie-responsive/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <script type="text/javascript" src="//io.vtex.com.br/checkout-ui/v6.59.0/lib/ie-responsive/IE7.js"></script>
+    <link href="//io.vtex.com.br/front-libs/font-awesome/3.2.1/css/font-awesome-ie7.min.css"/>
+    <![endif]-->
+    <!--[if IE 8]>
+    <script type="text/javascript" src="//io.vtex.com.br/checkout-ui/v6.59.0/lib/ie-responsive/IE8.js"></script>
+    <![endif]-->
+    <!--[if IE 9]>
+    <script type="text/javascript" src="//io.vtex.com.br/checkout-ui/v6.59.0/lib/ie-responsive/IE9.js"></script>
+    <![endif]-->
+
+        <script>      (function(v,t,e,x,r,c,a){        c=v.vtexrca=v.vtexrca||function(){(c.q=c.q||[]).push(arguments)}        ;c.l=+new Date;a=t.createElement(e);a.async=!0;        a.src=x;r=t.getElementsByTagName(e)[0];        a.onload=function(){          this.onload=function(){};          var rcEvent = new Event('rcReady');          window.dispatchEvent(rcEvent);          window.rcReady = true;        };        a.onreadystatechange=function(){          if (this.readyState === 'complete') {            this.onload();          };        };        r.parentNode.insertBefore(a,r);      })(window,document,'script','https://io.vtex.com.br/rc/rc.js');      vtexrca('init');    </script>
+    <script>
+        !function(){if('PerformanceLongTaskTiming' in window){var g=window.__tti={e:[]};
+        g.o=new PerformanceObserver(function(l){g.e=g.e.concat(l.getEntries())});
+        g.o.observe({entryTypes:['longtask']})}}();
+    </script>
+    <script type="text/javascript">
+        vtex.siteTitle = "";
+        vtex.accountName = "nikeclprod";
+        vtex.googleMapsApiKey = "" || undefined
+        vtex.geolocation = "false" || undefined
+        vtex.invoiceAddress = "false" || undefined
+        vtex.leanShipping = "true" || undefined
+        vtex.gtmId = "GTM-W5BC5TC"
+        vtex.vtexid = vtex.vtexid || {};
+        vtex.vtexid.accountId = "461d783e-3521-49e0-8222-8f5b3f9e2907";
+        vtex.vtexid.accountName = "nikeclprod";
+        vtex.checkout.version = "v6.59.0";
+    </script>
+
+    <script crossorigin="anonymous" src="//io.vtex.com.br/checkout-ui/v6.59.0/script/metrics.min.js"></script>
+
+    <script crossorigin="anonymous" src="//io.vtex.com.br/checkout-ui/v6.59.0/script/ko-templates.min.js"></script>
+
+    <script>document.write($("#message-template").html())</script>
+
+    
+    <script type="text/javascript" src="/files/checkout6-custom.js?v=05d34a3c"></script>
+<script type="text/javascript">(function () {
+    window.vtex = window.vtex || {};
+    vtex.portal = vtex.portal || {};
+    vtex.portal.context = {
+        accountId: '461d783e-3521-49e0-8222-8f5b3f9e2907'
+    };
+})()</script>
+<script type="text/javascript" src="//io.vtex.com.br/portal-ui/v1.14.14/scripts/vtex-events-all.min.js"></script>
+</head>
+
+<body class="www-nike-cl loading" id="checkoutMainContainer">
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5BC5TC"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+<script type="text/javascript" src="//io.vtex.com.br/portal-ui/v1.14.14/scripts/vtex-analytics.js"></script>
+
+    <div class="container-fluid pci-alert-topbar" data-bind="style: { display: cookiePCIExists() ? 'block' : 'none' }">
+        <span data-bind="text: alertPCICookieMessage()"></span>
+        <a href="javascript:void(0);" data-bind="click: killCookiePCI, text: alertPCICookieClick()"></a>
+        <span data-bind="text: alertPCICookieClickInfo()"></span>
+    </div>
+
+    
+
+    <div class="header_checkout">
+
+	<div class="container">
+
+
+		<a class="logo_checkout" href="/" target="_self">
+          <svg xmlns="http://www.w3.org/2000/svg" width="58" height="21" viewBox="0 0 58 21" style="float: left;"><g><g><path d="M16.033 11.648c-3.514.94-6.356.818-7.935-.367-4.146-3.148-.988-9.403.157-11.284C6.242 2.287 4.228 4.576 2.65 7.07.202 10.994-.864 15.287.794 18.026c3 4.988 10.146 2.698 14.726.695L58 .161z"></path></g></g></svg>
+		</a>
+
+      <a href="/help" target="_blank" class="help">Ayuda</a>
+
+	</div>
+	<div class="header_bottom_checkout">
+		<div class="container">  
+			<div class="info-comunicacion">
+				<ul>
+          <span>Envío gratis para Miembros y hasta 6 cuotas sin interés.<!--<a href="/help/">Ver aquí.</a>--></span>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- header_checkout -->
+
+    <div class="vtex-front-messages-placeholder"></div>
+
+    <!-- DESATIVA PLUGIN SKYPE -->
+    <span id="skype_highlighting_settings" display="none" autoextractnumbers="0"></span>
+    <!-- END -->
+
+    <div class="container container-main">
+
+        <h1 class="hide" id="orderform-title" data-i18n="title" data-bind="fadeVisible: inOrderForm() && !sac.isActive()"></h1>
+        <h1 class="hide" id="orderform-sac-title" data-i18n="sacTitle" data-bind="fadeVisible: sac.isActive()"></h1>
+        <h1 class="hide" id="cart-title" data-i18n="shoppingCart" data-bind="fadeVisible: inCart() && !sac.isActive()"></h1>
+
+        <div id="order-by" class="hide order-by form-inline" data-bind="visible: multipleItems">
+        <label for="order-by-select" class="order-by-label control-label" data-i18n="orderBy.title"></label>
+        <select
+            id="order-by-select"
+            class="order-by-select"
+            data-bind="options: availableOrdinationOptions,
+                    optionsText: 'text',
+                    value: selectedOrdination">
+        </select>
+        </div>
+
+        <small class="gift-list-alert alert" style="display:none;" data-bind="visible: isUsingGiftRegistry">
+            <i class="icon-gift icon-large"></i>
+            <span class="gift-list-alert-text" data-i18n="giftListAlert"></span>
+            <b class="gift-list-alert-name" data-bind="text: giftRegistryDescription"></b>.
+            <a href="javascript:void(0);" data-bind="click: removeGiftRegistry" data-i18n="giftListDismiss"></a>.
+        </small>
+
+        <div class="loading loading-bg" data-bind="visible: loading">
+            <div class="loading-img">
+                <i class="icon-spinner icon-spin icon-3x">
+                    <span data-i18n="global.loading"></span>
+                </i>
+            </div>
+        </div>
+
+        <div class="checkout-container row-fluid">
+            <!-- CART -->
+            <div class="cart-template full-cart span12">
+                <div class="cart-template-holder" id="cartLoadedDiv" data-bind="template: 'cart-template'"></div>
+
+                <div class="cart-select-gift-placeholder cart-select-gift-placeholder--default"></div>
+
+                <div class="summary-template-holder" data-bind="template: {name: 'summary-template', afterRender: vtex.i18n.translateHtml}"></div>
+
+                <div class="clearfix pull-right cart-links cart-links-bottom hide">
+                    <span class="link-choose-more-products-wrapper">
+                        <a data-bind="attr: {href: (window.__RUNTIME__ && window.__RUNTIME__.rootPath ? (window.__RUNTIME__.rootPath + (window.__RUNTIME__.workspace != 'master' ? ('?workspace=' + window.__RUNTIME__.workspace) : '')) : '/') }" id="cart-choose-more-products" class="more link-choose-more-products" data-i18n="cart.chooseMoreProducts"></a>
+                    </span>
+                    <span class="link-print-cart-wrapper hide" data-bind="fadeVisible: userType() == 'callCenterOperator'">
+                        <a id="cart-print" onClick="window.print()" class="btn btn-large link-print-cart" data-i18n="cart.print"></a>
+                    </span>
+                    <span class="btn-place-order-wrapper">
+                        <a href="#/orderform"
+                        target="_self" data-event="cartToOrderform" id="cart-to-orderform" class="btn btn-large btn-success pull-left-margin btn-place-order"
+                        data-i18n="cart.finalize" data-bind="click: cart.next"></a>
+                    </span>
+                </div>
+                <div class="extensions-checkout-buttons-container row-fluid">
+                    <div class="extensions-checkout-buttons span5 pull-right">
+                        <div class="render-container" id="render-checkout-buttons"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /END CART -->
+
+            <!-- ORDERFORM -->
+            <div class="row-fluid orderform-template span12">
+                <div class="orderform-template-holder span8">
+                    <div class="row-fluid">
+                        <div id="client-profile-data" class="span6 client-profile-data" data-bind="template: {name: 'orderForm-clientProfileData-template', afterRender: afterRender}"></div>
+                        <div id="shipping-data" class="span6 pull-right shipping-data" data-bind="css: { 'step accordion-group box-info': !showShipping() }">
+                            <div class="accordion-heading">
+                                <span class="accordion-toggle collapsed" data-i18n="global.shipping" ><i class="icon-home"></i><span>Shipping</span>
+                                </span>
+                            </div>
+                            <div class="accordion-inner">
+                                <div class="box-step box-info shipping-summary-placeholder">
+                                    <div class="shipping-summary-info component-loading">
+                                        <div class="loading-img">
+                                            <i class="icon-spinner icon-spin icon-2x">
+                                                <span data-i18n="global.loading"></span>
+                                            </i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="payment-data" class="span6 pull-right payment-data" data-bind="template: {name: 'orderForm-paymentData-template', afterRender: afterRender}, css: { 'span6': !active(), 'span12': active }"></div>
+                    </div>
+                </div>
+                <div class="cart-template mini-cart span4">
+                    <div class="cart-fixed">
+                        <h2 data-i18n="totalizers.summary">Resumo da compra</h2>
+
+                        <!-- TODO remove window.router -->
+                        <div class="summary-cart-template-holder" data-bind="fadeVisible: window.router.inOrderForm, template: { name: 'orderForm-summary-cart-template', afterRender: vtex.i18n.translateHtml }"></div>
+
+                        <p id="go-to-cart-button" class="link link-cart pull-right" data-bind="if: !window.router.sac.isActive()">
+                            <small>
+                                <a data-bind="attr: { href: window.checkout.cartURL() }" id="orderform-minicart-to-cart" target="_self" data-event="orderformToCart" data-i18n="global.backToCart"></a>
+                            </small>
+                        </p>
+                        <div class="summary-template-holder" data-bind="template: 'summary-template'"></div>
+
+                        <div class="payment-confirmation-wrap">
+                            <div class="note summary-note" data-bind="template: 'note-template', css: { hide: !window.cart.allowManualPrice() }"></div>
+
+                            <p class="payment-submit-wrap">
+                                <button id="sac-submit" class="btn btn-default btn-large btn-block" data-bind="visible: window.router.sac.isActive(), click: cancel"
+                                    tabindex="200">
+                                    <span data-i18n="paymentData.cancel">Cancelar</span>
+                                </button>
+                                <button id="payment-data-submit" class="submit btn btn-success btn-large btn-block" data-bind="fadeVisible: window.router.sac.isActive(), click: submit, disable: window.checkout.disablePaymentButton"
+                                    tabindex="200">
+                                    <i class="icon-lock" data-bind="visible: !window.checkout.disablePaymentButton()"></i>
+                                    <i class="icon-spinner icon-spin" data-bind="visible: window.checkout.disablePaymentButton()"></i>
+                                    <span data-i18n="paymentData.saveChanges">Salvar alterações</span>
+                                </button>
+                                <button id="payment-data-submit" class="submit btn btn-success btn-large btn-block" data-bind="fadeVisible: !window.router.sac.isActive() && window.paymentData.isPaymentButtonVisible(), click: submit, disable: window.checkout.disablePaymentButton"
+                                    tabindex="200">
+                                    <i class="icon-lock" data-bind="visible: !window.checkout.disablePaymentButton()"></i>
+                                    <i class="icon-spinner icon-spin" data-bind="visible: window.checkout.disablePaymentButton()"></i>
+                                    <span data-i18n="paymentData.confirm">Confirmar compra</span>
+                                </button>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /END ORDERFORM -->
+        </div>
+        <div class="transactions-container row-fluid">
+            <div class="transactions span5 pull-right">
+                <div class="render-container" id="render-transactions"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="render-container" id="render-cartman"></div>
+<div class="render-container" id="universal-extensions"></div>
+
+<div class="footer">
+
+  <div class="footer_checkout">
+	<div class="container">
+    	<div class="copyright">
+            <div class="left">                        
+                <div class="selector-country">
+                    <a class="country" href="//www.nike.com/language_tunnel" data-pre="ILink">
+                    <svg height="15px" width="18px" fill="#fff" viewBox="0 0 42 58">
+                    <path d="M21 0C9.4 0 0 9.5 0 21.2 0 39.9 21 58 21 58s21-18.1 21-36.8C42 9.5 32.6 0 21 0zm0 31c-5.5 0-10-4.5-10-10s4.5-10 10-10 10 4.5 10 10-4.5 10-10 10z"></path></svg><span class="country-pin-label">Chile</span></a>
+                </div>  
+                <span>© 2021 Nike, Inc. Todos los derechos reservados</span>
+            </div>
+        
+            <div class="right">                  
+              <!--<a href="/ayuda">Guías</a>-->
+              <a href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=termsOfUse&amp;country=cl&amp;language=es-419&amp;requestType=redirect&amp;uxId=5d9f7d5739838be8eb46ae6e7b07e89">Términos de uso</a>
+              <a href="/terminos-venta">Términos de venta</a>
+              <!--<a href="/ayuda">Detalles de la empresa</a>-->
+              <a href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&amp;country=CL&amp;language=es-419&amp;requestType=redirect&amp;uxId=5d9f7d5739838be8eb46ae6e7b07e89">Política de privacidad y cookies</a>
+            
+            </div>
+            <!-- Left  -->
+    
+        </div>
+        <!-- CopyRight & Logos -->
+    </div>
+    
+  </div>
+  <!-- footer_checkout -->
+  
+  <a class="accountnikeplus" href="/account" style="display: none;">Comprar como miembro</a>
+  
+</div>
+<!-- container footer -->
+<script src="//io.vtex.com.br/vtex-id-ui/3.25.0/vtexid.min.js"></script>
+<script>
+    vtexid.setScopeName(vtex.vtexid.accountName);
+    vtexid.setScope(vtex.vtexid.accountId);
+</script>
+<script src="//io.vtex.com.br/front-libs/bundles/knockout-2.3.0-underscore-1.7.0-i18next-1.7.2-radio-0.2-json2-patch.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script crossorigin="anonymous" src="//io.vtex.com.br/checkout-ui/v6.59.0/script/lib-common.min.js"></script>
+
+<script src="//io.vtex.com.br/front-libs/dustjs-linkedin/2.3.5/dust-core-2.3.5.min.js"></script>
+<script src="//io.vtex.com.br/front-libs/dustjs-linkedin-helpers/1.1.1/dust-helpers-1.1.1.js"></script>
+<script src="//io.vtex.com.br/front-libs/parsley/2.0.3/parsley.min.js"></script>
+<script src="//io.vtex.com.br/front-libs/curl/0.8.10-vtex.2/curl.js"></script>
+
+<script src="//io.vtex.com.br/front.cart/v1.7.0/script/setup/front-cart.js"></script>
+
+<script src="//io.vtex.com.br/front-libs/front-i18n/0.7.2/vtex-i18n.js"></script>
+<script src="//io.vtex.com.br/front-libs/front-i18n/0.7.2/vtex-locale-selector.js"></script>
+
+
+
+<script src="//io.vtex.com.br/vtex.js/v2.13.0/retry-ajax.min.js"></script>
+<script src="//io.vtex.com.br/vtex.js/v2.13.0/extended-ajax.min.js"></script>
+<script src="//io.vtex.com.br/vtex.js/v2.13.0/checkout.min.js"></script>
+<script src="//io.vtex.com.br/front.phone/v4.15.0/script/phone-all-bundle.js"></script>
+
+<script data-render-loader-script="true">
+    (function(global){
+        if (typeof global.RenderExtensionLoader === "undefined" || global.RenderExtensionLoader === null) {
+            global.vtex.renderLoaderPromise = new Promise(function (resolve) {
+                global.vtex.renderRuntime = {
+                    extensions: {}, error: true, errorType: 'no-render-extension-loader'
+                }
+                resolve()
+            });
+            return;
+        }
+
+        var allowedWorkspaceHosts = ['myvtex.com', 'vtexcommercestable.com.br', 'vtexcommercebeta.com.br'];
+
+        var getCookie=function(e){var o=new RegExp("(^|\\s)"+e+"=([^;]+)(;|$)").exec(window.document.cookie);return o&&o[2]};
+        var parseCookie=function(e){ var a=e&&decodeURIComponent(e); return a&&a.split(':')[0] }
+        var getQuery=function(e){var n=new RegExp("[?&]"+e+"=([^&]+)(&|$)").exec(window.location.search);return n&&n[1]};
+        var getHost = function () {
+          var host = window.location.host;
+          var h =
+            allowedWorkspaceHosts.findIndex(function (allowedHost) {
+              return host.indexOf(allowedHost) !== -1;
+            }) !== -1 && host.split("--");
+
+          return h && h.length > 1 && h[0];
+        };
+
+        var workspace = getQuery('workspace') || getHost() || parseCookie(getCookie('VtexWorkspace')) || 'master';
+        var publicEndpoint = getCookie('publicEndpoint') || getQuery('publicEndpoint') || 'myvtex.com';
+        var locale = getCookie('locale') || $('html').attr('lang');
+
+        global.vtex.renderLoader = new RenderExtensionLoader({
+            account: global.vtex.vtexid.accountName,
+            workspace: workspace,
+            path: '/checkout',
+            locale: locale,
+            publicEndpoint: publicEndpoint,
+        });
+
+        var renderLoaderReady = function() {
+            if (window.checkout) {
+                $(window).trigger('renderLoaderReady.vtex')
+            } else {
+                setTimeout(renderLoaderReady, 500)
+            }
+        }
+
+        global.vtex.renderLoader.getRuntimeContext()
+            .then(function(data) {
+                global.vtex.renderRuntime = data.runtime;
+                window.hasCheckoutIO = !!data.runtime.settings['vtex.checkout']
+                global.vtex.renderLoader
+                    .load()
+                    .then(renderLoaderReady)
+            })
+            .catch(function(error) {
+                window.logSplunk && window.logSplunk({
+                    level: 'Critical',
+                    type: 'Error',
+                    workflowType: 'checkout-ui',
+                    workflowInstance: 'render-load-timeout',
+                    event: {
+                        orderFormId: vtexjs.checkout.orderFormId,
+                        error: JSON.stringify(error)
+                    },
+                    account: vtex.accountName,
+                })
+                global.vtex.renderRuntime = {
+                    extensions: {}, error: true, errorType: 'render-load-failed'
+                };
+            });
+    })(this)
+</script>
+<script crossorigin="anonymous" src="//io.vtex.com.br/checkout-ui/v6.59.0/script/checkout-lib.min.js"></script>
+<script crossorigin="anonymous" src="//io.vtex.com.br/checkout-ui/v6.59.0/script/checkout.min.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"6fe7e33bbcf9cfbb","token":"4f3316f532114c19a35548f5b651d9a5","version":"2021.12.0","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>

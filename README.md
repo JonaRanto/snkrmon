@@ -1,5 +1,9 @@
-# snkrmon v1.0.5
+# snkrmon v1.0.6
 ## Control de versiones
+### v1.0.6 - Se agrega la extension auto-refresh
+    - Se modifico la estructura para funcionar con la extension auto-refresh.
+    - Se agrega la carpeta de chrome a los archivos de salida.
+    - Se hace una segunda verificacion del numero de cuotas.
 ### v1.0.5 - Version ejecutable
     - Ahora se ejecuta por medio de un ".exe".
     - Se agrega la extension .log a los archivos de logs.

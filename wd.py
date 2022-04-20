@@ -1,25 +1,16 @@
 from log_control import log
-from configparser import ConfigParser
-import subprocess, os
+import subprocess
 
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.common.exceptions import SessionNotCreatedException
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
-parser = ConfigParser()
-parser.read('config.ini')
-
-def wd_conn():
+def wd_conn(chrome_path, chrome_filename, port, chrome_files, current_path, window_size):
     from selenium import webdriver as wd
 
     log('Estableciendo variables de Chrome...')
-    chrome_path = parser.get('paths', 'chrome_path')
-    chrome_filename = parser.get('files', 'chrome_filename')
-    port = parser.get('other', 'chrome_port')
-    chrome_files = parser.get('dirs', 'chrome_files_dir')
-    current_path = os.getcwd() + '\\'
-    window_size = parser.get('other', 'window_width') + ',' + parser.get('other', 'window_height')
+    
     cmd = '"' + chrome_path + chrome_filename + '"' + ' --remote-debugging-port=' + port + ' --user-data-dir=' + '"' + current_path + chrome_files + '" --window_size=' + window_size
     
     log('Abriendo Chrome...', 20)

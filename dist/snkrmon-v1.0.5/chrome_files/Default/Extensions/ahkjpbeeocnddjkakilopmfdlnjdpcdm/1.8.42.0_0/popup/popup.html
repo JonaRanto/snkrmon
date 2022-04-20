@@ -1,0 +1,230 @@
+﻿<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <link href="popup.css" type="text/css" rel="stylesheet">
+        <link href="offline_popup.css" type="text/css" rel="stylesheet">
+        <script src="../snapshot/script.popup.js"></script>
+    </head>
+    <body class="wait">
+        <div id="content">
+            <div class="optional-block popup-loader popup-footer-background_custom">
+                <div class="popup-loader-animation popup-loader-animation-Image_custom"></div>
+                <div class="popup-loader-footer popup-loader-footer-background_custom"></div>
+            </div>
+            <div class="popup popup-background_custom">
+                <div class="popup-body popup-body-background_custom">
+                    <!--DNT-->
+                    <div class="optional-block popup-section DntArea">
+                        <!--do not forget area-expandable_expanded-->
+                        <div class="area-header area-header-background_custom area-expandable area-expandable-Image_custom" id="DntHeader">
+                            <div class="area-headerTitle">
+                                <!--dnt-area-icon_disabled-->
+                                <div class="area-icon dnt-area-icon dnt-area-icon-Image_custom" id="DntIcon">
+                                    <div class="optional-block shield-icon DntShieldIcon"></div>
+                                </div>
+                                <div class="area-title area-title-foreground_custom"><span id="PopupDntTitle"><!--PopupDntTitle-->Защита от сбора данных</span></div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="area-headerDetails">
+                                <div class="area-headerDetailsMainColumn">
+                                    <div class="area-text area-text-foreground_custom">
+                                        <span class="optional-line DntCheckLicenseText" id="PopupDntTextCheckLicense"><!--PopupDntTextCheckLicense-->Функция недоступна. Устраните проблемы с подпиской.</span>
+                                        <span class="optional-line DntTaskDisabledText" id="PopupDntTextTaskDisabled"><!--PopupDntTextTaskDisabled-->Защита от сбора данных обнаруживает и блокирует попытки собрать данные, которые позволяют идентифицировать вас и могут быть использованы в рекламных целях.</span>
+                                        <span class="optional-line DntBlockingDisabledText" id="PopupDntTextBlockingDisabled"><!--PopupDntTextBlockingDisabled-->Сбор данных разрешен.</span>
+                                        <span class="optional-line DntBlockingDisabledOnThisSiteText" id="PopupDntTextBlockingDisabledOnThisSite"><!--PopupDntTextBlockingDisabledOnThisSite-->На этом сайте сбор данных разрешен.</span>
+                                    </div>
+                                    <div class="area-text area-text-foreground_custom">
+                                        <span class="optional-line DntBlockedTrackersText" id="PopupDntTextBlockedTrackersCount"><!--PopupDntTextBlockedTrackersCount-->Обнаружено попыток сбора данных:</span>
+                                        <span class="optional-line DntDetectedTrackersText" id="PopupDntTextDetectedTrackersCount"><!--PopupDntTextDetectedTrackersCount-->Обнаружено попыток сбора данных:</span>
+                                        <span class="optional-line DntBlockedTrackersText DntDetectedTrackersText" id="DntCounter">0</span>
+                                    </div>
+                                    <div class="area-textSmall area-textSmall-foreground_custom">
+                                        <span class="optional-line DntIncompatibleText DntTrustedText CurrentHost">http://foo.com</span>
+                                        <span class="optional-line DntIncompatibleText" id="PopupDntSmallTextBlockingDisabledOnIncompatibleSite"><!--PopupDntSmallTextBlockingDisabledOnIncompatibleSite-->входит в список несовместимых сайтов.</span>
+                                        <span class="optional-line DntTrustedText" id="PopupDntSmallTextBlockingDisabledOnPartnerSite"><!--PopupDntSmallTextBlockingDisabledOnPartnerSite-->входит в список доверенных сайтов Лаборатории Касперского и партнеров.</span>
+                                    </div>
+                                </div>
+                                <div class="area-headerDetailsRightColumn">
+                                    <button class="optional-block area-enableButton area-enableButton-background_custom area-enableButton-foreground_custom area-enableButton-border_custom DntButtonEnable" id="dntEnableButton"><span id="PopupDntButtonEnableTask"><!--PopupDntButtonEnableTask-->Включить</span></button>
+                                    <button class="optional-block area-enableButton area-enableButton-background_custom area-enableButton-foreground_custom area-enableButton-border_custom DntCheckLicenseButton" id="dntCheckLicenseButton"><span id="PopupDntButtonCheckLicense"><!--PopupDntButtonCheckLicense-->Подробнее</span></button>
+                                    <button class="optional-block area-advertiseButton area-advertiseButton-background_custom area-advertiseButton-foreground_custom area-advertiseButton-border_custom DntSubscriptionButton" id="dntCheckSubscritionButton"><span id="PopupDntButtonCheckSubscription"><!--PopupDntButtonCheckSubscription-->Расширение защиты</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="optional-block area-body DntBody">
+                            <div class="area-bodySeparator area-bodySeparator-background_custom"></div>
+                            <!--scrollable-content-->
+                            <div class="area-bodyContent" id="DntScrollableContent">
+                                <div class="optional-block DntExpandedContent">
+                                    <ul class="optional-block dnt-category">
+                                        <li class="dnt-category">
+                                            <div class="dnt-category-header" id="socialNetworkHeader">
+                                                <button class="dnt-category-expandButton dnt-category-expandButton-Image_custom" id="socialNetworkButton"></button>
+                                                <div class="dnt-category-icon social-networks_enabled-Image_custom social-networks_enabled" id="socialNetworkIcon"></div>
+                                                <div class="dnt-category-title">
+                                                    <span id="PopupDntCategoryTitleSocialNetworks"><!--PopupDntCategoryTitleSocialNetworks-->Социальные сети</span><span>: </span><span class="dnt-category-counter dnt-category-counter-foreground_custom" id="socialNetworkCounter">0</span>
+                                                    <span class="dnt-category-title-note">
+                                                        <span class="optional-line PopupDntCategoryTitleNoteNotBlocked"><!--PopupDntCategoryTitleNoteNotBlocked-->(не блокируется)</span>
+                                                        <span class="optional-line PopupDntCategoryTitleNotePartiallyBlocked"><!--PopupDntCategoryTitleNotePartiallyBlocked-->(частично блокируется)</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <ul class="dnt-category-content dnt-trackers" id="socialNetworkTrackers">
+                                                <!--<li class="dnt-tracker-name-blocked"><span>_TrackerName_</span><span>:</span><span class="dnt-tracker-counter">_trackerValue_</span></li>-->
+                                            </ul>
+                                        </li>
+                                        <li class="dnt-category">
+                                            <div class="dnt-category-header" id="webAnalyticsHeader">
+                                                <button class="dnt-category-expandButton dnt-category-expandButton-Image_custom" id="webAnalyticsButton"></button>
+                                                <div class="dnt-category-icon web-analytics_enabled-Image_custom web-analytics_enabled" id="webAnalyticsIcon"></div>
+                                                <div class="dnt-category-title">
+                                                    <span id="PopupDntCategoryTitleWebAnalytics"><!--PopupDntCategoryTitleWebAnalytics-->Веб-аналитика</span><span>: </span><span class="dnt-category-counter dnt-category-counter-foreground_custom" id="webAnalyticsCounter">0</span>
+                                                    <span class="dnt-category-title-note">
+                                                        <span class="optional-line PopupDntCategoryTitleNoteNotBlocked"><!--PopupDntCategoryTitleNoteNotBlocked-->(не блокируется)</span>
+                                                        <span class="optional-line PopupDntCategoryTitleNotePartiallyBlocked"><!--PopupDntCategoryTitleNotePartiallyBlocked-->(частично блокируется)</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <ul class="dnt-category-content dnt-trackers" id="webAnalyticsTrackers">
+                                                <!--<li class="dnt-tracker-name-blocked"><span>_TrackerName_</span><span>:</span><span class="dnt-tracker-counter">_trackerValue_</span></li>-->
+                                            </ul>
+                                        </li>
+                                        <li class="dnt-category">
+                                            <div class="dnt-category-header" id="webBugsHeader">
+                                                <button class="dnt-category-expandButton dnt-category-expandButton-Image_custom" id="webBugsButton"></button>
+                                                <div class="dnt-category-icon web-bugs_enabled-Image_custom web-bugs_enabled" id="webBugsIcon"></div>
+                                                <div class="dnt-category-title">
+                                                    <span id="PopupDntCategoryTitleWebBugs"><!--PopupDntCategoryTitleWebBugs-->Веб-маяки</span><span>: </span><span class="dnt-category-counter dnt-category-counter-foreground_custom" id="webBugsCounter">0</span>
+                                                    <span class="dnt-category-title-note">
+                                                        <span class="optional-line PopupDntCategoryTitleNoteNotBlocked"><!--PopupDntCategoryTitleNoteNotBlocked-->(не блокируется)</span>
+                                                        <span class="optional-line PopupDntCategoryTitleNotePartiallyBlocked"><!--PopupDntCategoryTitleNotePartiallyBlocked-->(частично блокируется)</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <ul class="dnt-category-content dnt-trackers" id="webBugsTrackers">
+                                                <!--<li class="dnt-tracker-name-blocked"><span>_TrackerName_</span><span>:</span><span class="dnt-tracker-counter">_trackerValue_</span></li>-->
+                                            </ul>
+                                        </li>
+                                        <li class="dnt-category">
+                                            <div class="dnt-category-header" id="adAgenciesHeader">
+                                                <button class="dnt-category-expandButton dnt-category-expandButton-Image_custom" id="adAgenciesButton"></button>
+                                                <div class="dnt-category-icon ad-agencies_enabled-Image_custom ad-agencies_enabled" id="adAgenciesIcon"></div>
+                                                <div class="dnt-category-title">
+                                                    <span id="PopupDntCategoryTitleAdAgencies"><!--PopupDntCategoryTitleAdAgencies-->Рекламные агентства</span><span>: </span><span class="dnt-category-counter dnt-category-counter-foreground_custom" id="adAgenciesCounter">0</span>
+                                                    <span class="dnt-category-title-note">
+                                                        <span class="optional-line PopupDntCategoryTitleNoteNotBlocked"><!--PopupDntCategoryTitleNoteNotBlocked-->(не блокируется)</span>
+                                                        <span class="optional-line PopupDntCategoryTitleNotePartiallyBlocked"><!--PopupDntCategoryTitleNotePartiallyBlocked-->(частично блокируется)</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <ul class="dnt-category-content dnt-trackers" id="adAgenciesTrackers">
+                                                <!--<li class="dnt-tracker-name-blocked"><span>_TrackerName_</span><span>:</span><span class="dnt-tracker-counter">_trackerValue_</span></li>-->
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul class="area-menu">
+                                    <li class="optional-block dntMenuShowBlockingFailures"><button class="area-menu-link area-menu-link_warning-background_custom area-menu-link_warning-foreground_custom area-menu-link_warning-border_custom area-menu-link_warning" id="dntShowBlockingFailuresButton"><span id="PopupDntMenuItemShowBlockingFailures"><!--PopupDntMenuItemShowBlockingFailures-->Что не удалось заблокировать?</span></button></li>
+                                    <li class="optional-block DntMenuEnableBlockingOnThiSite"><button class="area-menu-link area-menu-link-background_custom area-menu-link-foreground_custom area-menu-link-border_custom" id="dntEnableOnThisSiteButton"><span id="PopupDntMenuItemEnableBlockingOnThisSite"><!--PopupDntMenuItemEnableBlockingOnThisSite-->Запретить сбор данных на этом сайте</span></button></li>
+                                    <li class="optional-block DntMenuDisableBlockingOnThisSite"><button class="area-menu-link area-menu-link-background_custom area-menu-link-foreground_custom area-menu-link-border_custom" id="dntDisableOnThisSiteButton"><span id="PopupDntMenuItemDisableBlockingOnThisSite"><!--PopupDntMenuItemDisableBlockingOnThisSite-->Разрешить сбор данных на этом сайте</span></button></li>
+                                    <li class="optional-block DntMenuEnableBlocking"><button class="area-menu-link area-menu-link-background_custom area-menu-link-foreground_custom area-menu-link-border_custom" id="dntEnableBlockingButton"><span id="PopupDntMenuItemEnableBlocking"><!--PopupDntMenuItemEnableBlocking-->Запретить сбор данных</span></button></li>
+                                    <li class="optional-block DntMenuDisableBlocking"><button class="area-menu-link area-menu-link-background_custom area-menu-link-foreground_custom area-menu-link-border_custom" id="dntDisableBlockingButton"><span id="PopupDntMenuItemDisableBlocking"><!--PopupDntMenuItemDisableBlocking-->Разрешить сбор данных</span></button></li>
+                                    <li class="optional-block DntMenuSettings"><button class="area-menu-link area-menu-link-background_custom area-menu-link-foreground_custom area-menu-link-border_custom" id="dntSettingsButton"><span id="PopupDntMenuItemSettings"><!--PopupDntMenuItemSettings-->Настройки</span></button></li>
+                                    <li class="optional-block DntMenuHelp"><button class="area-menu-link area-menu-link-background_custom area-menu-link-foreground_custom area-menu-link-border_custom" id="dntHelpButton"><span id="PopupDntMenuItemHelp"><!--PopupDntMenuItemHelp-->Помощь</span></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--AntiBanner-->
+                    <div class="popup-sectionSeparator popup-sectionSeparator-background_custom optional-block AntiBannerArea"></div>
+                    <div class="optional-block popup-section AntiBannerArea">
+                        <!--area-header_disabled area-expandable_expanded-->
+                        <div class="area-header area-header-background_custom area-expandable area-expandable-Image_custom" id="AbHeader">
+                            <div class="area-headerTitle">
+                                <!--antibanner-area-icon_disabled-->
+                                <div class="area-icon antibanner-area-icon antibanner-area-icon-Image_custom" id="AbIcon">
+                                    <div class="optional-block shield-icon shield-icon-Image_custom abShieldIcon"></div>
+                                </div>
+                                <div class="area-title area-title-foreground_custom"><span id="PopupAntiBannerTitle"><!--PopupAntiBannerTitle-->Анти-Баннер</span></div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="area-headerDetails">
+                                <div class="area-headerDetailsMainColumn">
+                                    <div class="area-text area-text-foreground_custom">
+                                        <span class="optional-line abCheckLicenseText" id="PopupAntiBannerTextCheckLicense"><!--PopupAntiBannerTextCheckLicense-->Функция недоступна. Устраните проблемы с подпиской.</span>
+                                        <span class="optional-line abBlockingText" id="PopupAntiBannerTextBlockedBannersCount"><!--PopupAntiBannerTextBlockedBannersCount-->Заблокировано баннеров:</span>
+                                        <span class="optional-line abBlockingText" id="AntiBannerCounter">119</span>
+                                        <span class="optional-line abTaskDisabledText" id="PopupAntiBannerTextTaskDisabled"><!--PopupAntiBannerTextTaskDisabled-->Анти-Баннер находит на веб-странице рекламные баннеры и блокирует их отображение.</span>
+                                        <span class="optional-line adBlockingDisabledOnThisSite" id="PopupAntiBannerTextBlockingDisabledOnThisSite"><!--PopupAntiBannerTextBlockingDisabledOnThisSite-->Блокирование баннеров на этом веб-сайте отключено.</span>
+                                        <span class="optional-line abBlockAfterReloadText" id="PopupAntiBannerBannersWillBeBlockedAfterPageReload"><!--PopupAntiBannerBannersWillBeBlockedAfterPageReload-->Перезагрузите страницу, чтобы баннеры перестали отображаться.</span>
+                                        <span class="optional-line abDisableAfterReloadText" id="PopupAntiBannerReloadPageToSeeAdvertisement"><!--PopupAntiBannerReloadPageToSeeAdvertisement-->На этом сайте баннеры разрешены. Перезагрузите страницу для отображения баннеров.</span>
+                                    </div>
+                                    <div class="area-textSmall area-textSmall-foreground_custom">
+                                        <span class="optional-line abIncompatibleDescription abIncompatiblePartnerDescription CurrentHost">http://foo.com</span>
+                                        <span class="optional-line abIncompatibleDescription" id="PopupAntiBannerSmallTextBlockingDisabledOnIncompatibleSite"><!--PopupAntiBannerSmallTextBlockingDisabledOnIncompatibleSite-->входит в список несовместимых сайтов.</span>
+                                        <span class="optional-line abIncompatiblePartnerDescription" id="PopupAntiBannerSmallTextBlockingDisabledOnPartnerSite"><!--PopupAntiBannerSmallTextBlockingDisabledOnPartnerSite-->входит в список доверенных сайтов Лаборатории Касперского и партнеров.</span>
+                                    </div>
+                                </div>
+                                <div class="area-headerDetailsRightColumn">
+                                    <button class="optional-block area-enableButton area-enableButton-background_custom area-enableButton-foreground_custom area-enableButton-border_custom abEnable" id="abEnableButton"><span id="PopupAntiBannerButtonEnableTask"><!--PopupAntiBannerButtonEnableTask-->Включить</span></button>
+                                    <button class="optional-block area-enableButton area-enableButton-background_custom area-enableButton-foreground_custom area-enableButton-border_custom abCheckLicenseButton" id="abCheckLicenseButton"><span id="PopupAntiBannerButtonCheckLicense"><!--PopupAntiBannerButtonCheckLicense-->Подробнее</span></button>
+                                    <button class="optional-block area-advertiseButton area-advertiseButton-background_custom area-advertiseButton-foreground_custom area-advertiseButton-border_custom abRestrictionSubscriptionButton" id="abCheckSubscritionButton"><span id="PopupAntiBannerButtonCheckSubscription"><!--PopupAntiBannerButtonCheckSubscription-->Расширение защиты</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="optional-block area-body AbBody">
+                            <div class="area-bodySeparator area-bodySeparator-background_custom"></div>
+                            <!--scrollable-content-->
+                            <div class="area-bodyContent" id="AbScrollableContent">
+                                <ul class="area-menu">
+                                    <li class="optional-block abEnableBlockingOnSite"><button class="area-menu-link area-menu-link-background_custom area-menu-link-foreground_custom area-menu-link-border_custom" id="abEnableOnThisSiteButton"><span id="PopupAntiBannerMenuItemEnableBlockingOnSite"><!--PopupAntiBannerMenuItemEnableBlockingOnSite-->Включить блокирование на этом сайте</span></button></li>
+                                    <li class="optional-block abDisableOnThisSiteButton"><button class="area-menu-link area-menu-link-background_custom area-menu-link-foreground_custom area-menu-link-border_custom abDisableBlockingOnSiteButton" id="abDisableOnThisSiteButton"><span id="PopupAntiBannerMenuItemDisableBlockingOnSite"><!--PopupAntiBannerMenuItemDisableBlockingOnSite-->Выключить блокирование на этом сайте</span></button></li>
+                                    <li class="optional-block abDisableButton"><button class="area-menu-link area-menu-link-background_custom area-menu-link-foreground_custom area-menu-link-border_custom" id="abDisableButton"><span id="PopupAntiBannerMenuItemDisableTask"><!--PopupAntiBannerMenuItemDisableTask-->Выключить Анти-Баннер</span></button></li>
+                                    <li class="optional-block abSettingsButton"><button class="area-menu-link area-menu-link-background_custom area-menu-link-foreground_custom area-menu-link-border_custom" id="abSettingsButton"><span id="PopupAntiBannerMenuItemSettings"><!--PopupAntiBannerMenuItemSettings-->Настройки</span></button></li>
+                                    <li class="optional-block abHelpButton"><button class="area-menu-link area-menu-link-background_custom area-menu-link-foreground_custom area-menu-link-border_custom" id="abHelpButton"><span id="PopupAntiBannerMenuItemHelp"><!--PopupAntiBannerMenuItemHelp-->Помощь</span></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--PhishingFeedback-->
+                    <div class="popup-sectionSeparator popup-sectionSeparator-background_custom optional-block PhfbArea"></div>
+                    <div class="popup-section optional-block PhfbArea">
+                        <div class="area-header area-header-background_custom area-header_active" id="OpenPhfbWindowButton">
+                            <div class="area-headerTitle">
+                                <div class="area-icon phfb-area-icon phfb-area-icon-Image_custom"></div>
+                                <div class="area-title area-title-foreground_custom"><span id="PopupPhfbTitle"><!--PopupPhfbTitle-->Сообщить о подозрении на фишинг</span></div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BrokenWebpageFeedback-->
+                    <div class="popup-sectionSeparator popup-sectionSeparator-background_custom optional-block BwfbArea"></div>
+                    <div class="popup-section optional-block BwfbArea">
+                        <div class="area-header area-header-background_custom area-header_active" id="OpenBwfbWindowButton">
+                            <div class="area-headerTitle">
+                                <div class="area-icon bwfb-area-icon bwfb-area-icon-Image_custom"></div>
+                                <div class="area-title area-title-foreground_custom"><span id="PopupBwfbTitle"><!--PopupBwfbTitle-->Сообщить о проблеме с сайтом</span></div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--VK-->
+                    <div class="popup-sectionSeparator popup-sectionSeparator-background_custom optional-block VkArea"></div>
+                    <div class="popup-section optional-block VkArea">
+                        <div class="area-header area-header-background_custom area-header_active" id="OpenVkButton">
+                            <div class="area-headerTitle">
+                                <div class="area-icon vkbd-area-icon vkbd-area-icon-Image_custom"></div>
+                                <div class="area-title area-title-foreground_custom"><span id="PopupVirtualKeyboardTitle"><!--PopupVirtualKeyboardTitle-->Открыть Экранную клавиатуру</span></div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-footer popup-footer-background_custom">
+                    <!--<div class="logo logo-Image_custom"></div>-->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
