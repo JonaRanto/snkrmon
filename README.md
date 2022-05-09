@@ -1,5 +1,8 @@
-# snkrmon v1.0.8
+# snkrmon v1.0.9
 ## Control de versiones
+### v1.0.9 - La extensión auto-refresh se instala manualmente
+    - La extensión debe ser instalada manualmente debido a problemas con la instalación automatica.
+    - En caso de no tener agregada la extensión, se procede con los pasos de instalación.
 ### v1.0.8 - Se agrega larma al finalizar el proceso de pago
     - En lugar de presionar el boton de finalizar la compra, suena una alarma indicando que el proceso se a completado exitosamente.
     - Se agrega la configuración del nombre de la alarma a la configuracion avanzada.

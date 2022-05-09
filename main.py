@@ -26,12 +26,6 @@ if not os.path.isdir(parser.get('dirs', 'log_dir')):
     os.makedirs(parser.get('dirs', 'log_dir'))
 if not os.path.isdir(parser.get('dirs', 'chrome_files_dir')):
     os.makedirs(parser.get('dirs', 'chrome_files_dir'))
-    log('Configurando Chrome...')
-    os.system('robocopy ' + current_path + '\\easy-auto-refresh ' + current_path + chrome_files + ' /MIR')
-    set_extension = wd_conn(chrome_path, chrome_filename, port, chrome_files, current_path, window_size)
-    time.sleep(1)
-    set_extension.close()
-    os.system('copy ' + current_path + '\\easy-auto-refresh\\Default\\Preferences ' + current_path + chrome_files + '\\Default')
 
 sku = gui()
 
@@ -44,14 +38,25 @@ root.withdraw()
 log('Obteniendo sku...')
 url = parser.get('urls', 'nike_url').replace('[sku]', sku)
 
-# Verificar si el usuario se encuentra logeado.
+# Verificar que exista la extension easy-auto-refresh
+while True:
+    auto_refresh_extension = 'chrome://extensions/?id=aabcgdmkeabbnleenpncegpcngjpnjkc'
+    auto_refresh_download = 'https://chrome.google.com/webstore/detail/easy-auto-refresh/aabcgdmkeabbnleenpncegpcngjpnjkc'
+    wd.get(auto_refresh_extension)
+    if wd.current_url != auto_refresh_extension:
+        wd.get(auto_refresh_download)
+        showinfo('Agregar extensión', 'Se debe agregar la extensión auto-refresh para continuar. (Luego de instalarla, se debe cerrar la pestaña de bienvenida de la extensión)')
+    else:
+        break
+# El script para abrir una nueva pestaña se ejecuta antes del redirect ya que nike lo bloquea
 wd.execute_script('window.open("");')
 wd.get(url.replace('[redirect]', 'false'))
 wd.switch_to.window(wd.window_handles[1])
+# Verificar si el usuario se encuentra logeado.
 while True:
     wd.get(r'https://www.nike.cl/login')
-    log('Esperando inicio de sesion...', 20)
-    showinfo('Iniciar sesion', 'Se debe ejecutar el auto-refresh e iniciar sesion para continuar.')
+    log('Esperando inicio de sesión...', 20)
+    showinfo('Iniciar sesion', 'Se debe ejecutar el auto-refresh con 1 segundo de refresco e iniciar sesion para continuar.')
     wd.get(r'https://www.nike.cl/_secure/account#/profile')
     log('Verificando que se haya iniciado sesion.')
     if wd.current_url == r'https://www.nike.cl/_secure/account#/profile':

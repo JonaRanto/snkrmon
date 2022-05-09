@@ -16,7 +16,7 @@ def wd_conn(chrome_path, chrome_filename, port, chrome_files, current_path, wind
     log('Configurando WebDriver...', 20)
     config_chrome = wd.ChromeOptions()
 
-    log('Estableciendo "Browser Target"...')
+    log('Estableciendo "Browser Target"...')    # Se utiliza un explorador ya abierto para que no se detecte como software de automatización
     config_chrome.add_experimental_option('debuggerAddress', 'localhost:' + port)
 
     caps = DesiredCapabilities.CHROME.copy()    # Se obtiene una copia de la configuracion por defecto de las caps de Chrome
