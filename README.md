@@ -1,5 +1,10 @@
-# snkrmon v1.0.7
+# snkrmon v1.0.8
 ## Control de versiones
+### v1.0.8 - Se agrega larma al finalizar el proceso de pago
+    - En lugar de presionar el boton de finalizar la compra, suena una alarma indicando que el proceso se a completado exitosamente.
+    - Se agrega la configuración del nombre de la alarma a la configuracion avanzada.
+    - Se agrega un tiempo de espera de 0.1s al llenar los campos de pago.
+    - Corrección de bug que ejecutaba la aplicación al cerrar la interfaz gráfica.
 ### v1.0.7 - Se agrega automaticamente auto-refresh
     - Si no existe un archivo de chrome_files, se genera automaticamente con la extension auto-refresh.
 ### v1.0.6 - Se agrega la extension auto-refresh

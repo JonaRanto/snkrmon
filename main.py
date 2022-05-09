@@ -5,6 +5,7 @@ from gui import gui
 import time, os
 import tkinter as tk
 from tkinter.messagebox import showinfo
+from alarm_control import purchase_alert
 
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
@@ -62,6 +63,7 @@ while True:
 log('Estableciendo tiempo de espera limite...')
 elements_timeout_limit = parser.get('other', 'elements_timeout_limit')
 
+# Proceso de compra
 while True:
     try:
         log('Buscando disponibilidad de compra...', 20)
@@ -98,24 +100,24 @@ while True:
         for i in range(card_expiration_year_difference + 1):
             wd.find_element(By.ID, 'creditCardpayment-card-0Year').send_keys(Keys.DOWN)
         log('Llenando numero de tarjeta.')
+        time.sleep(0.1)
         wd.find_element(By.ID, 'creditCardpayment-card-0Number').click()
         wd.find_element(By.ID, 'creditCardpayment-card-0Number').send_keys(card_number)
         log('Llenando nombre y apellido del propietario de la tarjeta.')
+        time.sleep(0.1)
         wd.find_element(By.ID, 'creditCardpayment-card-0Name').click()
         wd.find_element(By.ID, 'creditCardpayment-card-0Name').send_keys(card_owner_name)
         log('Llenando CVV.')
+        time.sleep(0.1)
         wd.find_element(By.ID, 'creditCardpayment-card-0Code').click()
         wd.find_element(By.ID, 'creditCardpayment-card-0Code').send_keys(cvv)
         log('Llenando rut del propietario de la tarjeta.')
+        time.sleep(0.1)
         wd.find_element(By.ID, 'holder-document-0').click()
         wd.find_element(By.ID, 'holder-document-0').send_keys(card_owner_run)
 
         log('Cambiando el focus a la pagina principal.')
         wd.switch_to.default_content()
-
-        log('Finalizando proceso de compra...', 20)
-        wd.execute_script('arguments[0].removeAttribute("disabled", "")', wd.find_element(By.XPATH, '//*[@id=\'payment-data-submit\'][2]'))
-        wd.find_element(By.XPATH, '//*[@id=\'payment-data-submit\'][2]').click()
 
         time.sleep(1)
         if wd.current_url == 'https://www.nike.cl/checkout/#/payment':
@@ -124,6 +126,7 @@ while True:
             if len(wd.find_element(By.ID, 'creditCardpayment-card-0Brand').find_elements(By.TAG_NAME, 'option')) != 1:
                 wd.find_element(By.ID, 'creditCardpayment-card-0Brand').send_keys('Total')
                 log('El proceso de compra se ha finalizado exitosamente.')
+                purchase_alert(wd)
                 break
         log('Cambiando el focus a la pagina principal.')
         wd.switch_to.default_content()

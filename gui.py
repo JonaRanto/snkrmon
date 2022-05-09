@@ -1,7 +1,9 @@
+import sys
 from tkinter.messagebox import showerror, showinfo
 from log_control import log
 import tkinter as tk
 from configparser import ConfigParser
+import sys
 
 parser = ConfigParser()
 parser.read('config.ini')
@@ -30,6 +32,7 @@ def gui():
     def refreshAdvancedSettings():
         log('Refrescando configuracion avanzada...')
         input_log_dir.delete(0, 'end')
+        input_alarm_filename.delete(0, 'end')
         input_chrome_files_dir.delete(0, 'end')
         input_chrome_filename.delete(0, 'end')
         input_chrome_path.delete(0, 'end')
@@ -38,6 +41,7 @@ def gui():
         input_window_width.delete(0, 'end')
         input_window_height.delete(0, 'end')
         input_log_dir.insert(0, parser.get('dirs', 'log_dir'))
+        input_alarm_filename.insert(0, parser.get('files', 'alarm_filename'))
         input_chrome_files_dir.insert(0, parser.get('dirs', 'chrome_files_dir'))
         input_chrome_filename.insert(0, parser.get('files', 'chrome_filename'))
         input_chrome_path.insert(0, parser.get('paths', 'chrome_path'))
@@ -82,22 +86,24 @@ def gui():
         refreshAdvancedSettings()
         advanced_settings_frame.pack()
         lbl_log_dir.place(x=10, y=10)
-        lbl_chrome_files_dir.place(x=10, y=35)
-        lbl_chrome_filename.place(x=10, y=60)
-        lbl_chrome_path.place(x=10, y=85)
-        lbl_chrome_port.place(x=10, y=110)
-        lbl_elements_timeout_limit.place(x=10, y=135)
-        lbl_window_width.place(x=10, y=160)
-        lbl_window_height.place(x=10, y=185)
+        lbl_alarm_filename.place(x=10,y=35)
+        lbl_chrome_files_dir.place(x=10, y=60)
+        lbl_chrome_filename.place(x=10, y=85)
+        lbl_chrome_path.place(x=10, y=110)
+        lbl_chrome_port.place(x=10, y=135)
+        lbl_elements_timeout_limit.place(x=10, y=160)
+        lbl_window_width.place(x=10, y=185)
+        lbl_window_height.place(x=10, y=210)
         input_log_dir.place(x=145, y=10)
-        input_chrome_files_dir.place(x=145, y=35)
-        input_chrome_filename.place(x=145, y=60)
-        input_chrome_path.place(x=145, y=85)
-        input_chrome_port.place(x=145, y=110)
-        input_elements_timeout_limit.place(x=145, y=135)
-        input_window_width.place(x=145, y=160)
-        input_window_height.place(x=145, y=185)
-        btn_save_advanced_settings.place(x=145, y=210)
+        input_alarm_filename.place(x=145, y=35)
+        input_chrome_files_dir.place(x=145, y=60)
+        input_chrome_filename.place(x=145, y=85)
+        input_chrome_path.place(x=145, y=110)
+        input_chrome_port.place(x=145, y=135)
+        input_elements_timeout_limit.place(x=145, y=160)
+        input_window_width.place(x=145, y=185)
+        input_window_height.place(x=145, y=210)
+        btn_save_advanced_settings.place(x=145, y=235)
 
     def savePaymentSettings():
         log('Guardando configuracion de pago...')
@@ -117,6 +123,7 @@ def gui():
     def saveAdvancedSettings():
         log('Guardando configuracion avanzada...')
         parser.set('dirs', 'log_dir', log_dir.get())
+        parser.set('files', 'alarm_filename', alarm_filename.get())
         parser.set('dirs', 'chrome_files_dir', chrome_files_dir.get())
         parser.set('files', 'chrome_filename', chrome_filename.get())
         parser.set('paths', 'chrome_path', chrome_path.get())
@@ -172,6 +179,7 @@ def gui():
     btn_save_payment_settings = tk.Button(payment_settings_frame, text='Guardar', command=savePaymentSettings)
     # Advanced Settings Frame
     log_dir = tk.StringVar()
+    alarm_filename = tk.StringVar()
     chrome_files_dir = tk.StringVar()
     chrome_filename = tk.StringVar()
     chrome_path = tk.StringVar()
@@ -179,8 +187,9 @@ def gui():
     elements_timeout_limit = tk.StringVar()
     window_width = tk.StringVar()
     window_height = tk.StringVar()
-    advanced_settings_frame = tk.Frame(root, width=355, height=250)
+    advanced_settings_frame = tk.Frame(root, width=355, height=275)
     lbl_log_dir = tk.Label(advanced_settings_frame, text='Log dir: ')
+    lbl_alarm_filename = tk.Label(advanced_settings_frame, text='Alarm filename: ')
     lbl_chrome_files_dir = tk.Label(advanced_settings_frame, text='Chrome files dir: ')
     lbl_chrome_filename = tk.Label(advanced_settings_frame, text='Chrome filename: ')
     lbl_chrome_path = tk.Label(advanced_settings_frame, text='Chrome path: ')
@@ -189,6 +198,7 @@ def gui():
     lbl_window_width = tk.Label(advanced_settings_frame, text='Chrome width: ')
     lbl_window_height = tk.Label(advanced_settings_frame, text='Chrome height: ')
     input_log_dir = tk.Entry(advanced_settings_frame, width=7, textvariable=log_dir)
+    input_alarm_filename = tk.Entry(advanced_settings_frame, width=11, textvariable=alarm_filename)
     input_chrome_files_dir = tk.Entry(advanced_settings_frame, width=14, textvariable=chrome_files_dir)
     input_chrome_filename = tk.Entry(advanced_settings_frame, width=12, textvariable=chrome_filename)
     input_chrome_path = tk.Entry(advanced_settings_frame, width=32, textvariable=chrome_path)
@@ -212,6 +222,11 @@ def gui():
 
     onHome()
 
+    def exit():
+        log('Cerrando SNKRMON...')
+        sys.exit()
+
+    root.protocol('WM_DELETE_WINDOW', exit)
     root.mainloop()
 
     return sku.get()
