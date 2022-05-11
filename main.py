@@ -130,10 +130,14 @@ while True:
             wd.switch_to.frame(wd.find_element(By.XPATH, '//iframe[@class="span12"]'))
             if len(wd.find_element(By.ID, 'creditCardpayment-card-0Brand').find_elements(By.TAG_NAME, 'option')) != 1:
                 wd.find_element(By.ID, 'creditCardpayment-card-0Brand').send_keys('Total')
-                log('El proceso de compra se ha finalizado exitosamente.')
-                purchase_alert(wd)
                 break
         log('Cambiando el focus a la pagina principal.')
         wd.switch_to.default_content()
     except Exception as e:
         log(str(e), 40)
+
+log('Cambiando el focus a la pagina principal.')
+wd.switch_to.default_content()
+wd.find_element(By.XPATH, '//button[@id=\'payment-data-submit\'][2]').click()
+purchase_alert(wd)
+log('El proceso de compra se ha finalizado exitosamente.')
