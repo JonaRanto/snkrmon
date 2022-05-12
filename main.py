@@ -6,6 +6,7 @@ import time, os
 import tkinter as tk
 from tkinter.messagebox import showinfo
 from alarm_control import purchase_alert
+from socket import socket, AF_INET, SOCK_STREAM
 
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
@@ -27,7 +28,23 @@ if not os.path.isdir(parser.get('dirs', 'log_dir')):
 if not os.path.isdir(parser.get('dirs', 'chrome_files_dir')):
     os.makedirs(parser.get('dirs', 'chrome_files_dir'))
 
-sku = gui()
+while True:
+    sku = gui()
+    log('Verificando estado de puerto.')
+    try:
+        try:
+            s = socket(AF_INET, SOCK_STREAM, 0)
+        except:
+            log('No se puede abrir el socket.', 40)
+        s.connect(('localhost', int(port)))
+        connected  = True
+    except:
+        connected = False
+    finally:
+        if connected:
+            log('El puerto ingresado ya se encuentra ocupado.', 40)
+        else:
+            break
 
 wd = wd_conn(chrome_path, chrome_filename, port, chrome_files, current_path, window_size)
 
