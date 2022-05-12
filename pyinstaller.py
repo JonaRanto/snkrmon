@@ -1,4 +1,5 @@
 import os
+
 with open('README.md') as f:
     lines = f.read()
     first_line = lines.split('\n', 1)[0]

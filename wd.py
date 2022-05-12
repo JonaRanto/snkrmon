@@ -1,10 +1,12 @@
-from log_control import log
 import subprocess
 
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.common.exceptions import SessionNotCreatedException
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from webdriver_manager.chrome import ChromeDriverManager
+
+from log_control import log
+
 
 def wd_conn(chrome_path, chrome_filename, port, chrome_files, current_path, window_size):
     from selenium import webdriver as wd

@@ -1,9 +1,9 @@
 import sys
-from tkinter.messagebox import showerror, showinfo
-from log_control import log
 import tkinter as tk
 from configparser import ConfigParser
-import sys
+from tkinter.messagebox import showerror, showinfo
+
+from log_control import log
 
 parser = ConfigParser()
 parser.read('config.ini')

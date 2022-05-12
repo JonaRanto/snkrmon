@@ -1,17 +1,19 @@
-from log_control import log
-from configparser import ConfigParser
-from wd import wd_conn
-from gui import gui
-import time, os
+import os
+import time
 import tkinter as tk
+from configparser import ConfigParser
+from socket import AF_INET, SOCK_STREAM, socket
 from tkinter.messagebox import showinfo
-from alarm_control import purchase_alert
-from socket import socket, AF_INET, SOCK_STREAM
 
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support import expected_conditions as ec
+from selenium.webdriver.support.ui import WebDriverWait
+
+from alarm_control import purchase_alert
+from gui import gui
+from log_control import log
+from wd import wd_conn
 
 parser = ConfigParser()
 parser.read('config.ini')

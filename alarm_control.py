@@ -1,6 +1,7 @@
-from selenium.webdriver.chrome.webdriver import WebDriver
 import winsound
 from configparser import ConfigParser
+
+from selenium.webdriver.chrome.webdriver import WebDriver
 
 parser = ConfigParser()
 parser.read('config.ini')
