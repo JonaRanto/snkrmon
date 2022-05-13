@@ -1,5 +1,10 @@
-# snkrmon v1.1.0
+# snkrmon v2.0.0
 ## Control de versiones
+### v2.0.0 - Multiples usuarios
+    - Se añade el uso de multiples usuarios (Máx. 5).
+    - Se agrega la identidad del usuario al log.
+    - Interfaz grafica actualizada para la configuración de multiples usuarios.
+    - Actualización en el sistema de versionado (Versionado semántico).
 ### v1.1.0 - Se finaliza la compra
     - Al finalizar con el ciclo de compra, se hace click en finalizar compra.
 ### v1.0.9 - La extensión auto-refresh se instala manualmente
