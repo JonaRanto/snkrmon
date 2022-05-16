@@ -1,5 +1,8 @@
-# snkrmon v2.2.0
+# snkrmon v2.2.1
 ## Control de versiones
+### v2.2.1 - Eliminación de datos redundantes al instalar
+    - Se eliminan los archivos .py al realizar el despliegue.
+    - Se quita el icono del run.exe.
 ### v2.2.0 - Mejoras
     - Se añaden más usuario para tener un total de 15.
     - Se modifica la configuracion avanzada de la interfaz de usuario para tener el total de usuarios y puertos.
