@@ -1,5 +1,8 @@
-# snkrmon v2.1.0
+# snkrmon v2.2.0
 ## Control de versiones
+### v2.2.0 - Mejoras
+    - Se añaden más usuario para tener un total de 15.
+    - Se modifica la configuracion avanzada de la interfaz de usuario para tener el total de usuarios y puertos.
 ### v2.1.0 - Mejoras
     - Se establece el valor por defecto de la cantidad de usuarios en 1.
     - Al ejecutar pyinstaller.py se ignoran los archivos que no se utilizaran en cada uno de los ejecutables.
