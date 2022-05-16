@@ -1,5 +1,8 @@
-# snkrmon v2.0.0
+# snkrmon v2.1.0
 ## Control de versiones
+### v2.1.0 - Mejoras
+    - Se establece el valor por defecto de la cantidad de usuarios en 1.
+    - Al ejecutar pyinstaller.py se ignoran los archivos que no se utilizaran en cada uno de los ejecutables.
 ### v2.0.0 - Multiples usuarios
     - Se añade el uso de multiples usuarios (Máx. 5).
     - Se agrega la identidad del usuario al log.

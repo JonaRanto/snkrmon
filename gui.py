@@ -2,7 +2,6 @@ import sys
 import tkinter as tk
 from configparser import ConfigParser
 from tkinter.messagebox import showerror, showinfo
-from turtle import home
 
 from log_control import log
 
@@ -201,6 +200,7 @@ def gui():
     lbl_users_quantity = tk.Label(home_frame, text='Cantidad de usuarios: ')
     input_sku = tk.Entry(home_frame, width=7, textvariable=sku)
     input_users_quantity = tk.OptionMenu(home_frame, users_quantity, *['1', '2', '3', '4', '5'])
+    users_quantity.set('1')
     btn_start = tk.Button(home_frame, text='Comenzar', command=start)
 
     # Payment Settings Frame
