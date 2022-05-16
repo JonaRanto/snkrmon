@@ -49,4 +49,4 @@ for i in range(users_quantity):
 
     port = parser.get('other', 'chrome_port_' + this_user_number)
     chrome_files = parser.get('dirs', 'chrome_files_dir_' + this_user_number)
-    subprocess.Popen(['python', 'auto_purchase.py', 'purchase', sku, port, chrome_files])
+    subprocess.Popen(['run.exe', 'purchase', sku, port, chrome_files])
