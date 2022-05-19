@@ -6,13 +6,12 @@ from socket import AF_INET, SOCK_STREAM, socket
 from gui import gui
 from log_control import log
 
-parser = ConfigParser()
-parser.read('config.ini')
-
 while True:
     gui_return = gui()
 
-    sku = gui_return['sku']
+    parser = ConfigParser()
+    parser.read('config.ini')
+
     users_quantity = gui_return['users_quantity']
 
     for n in range(users_quantity):
@@ -47,6 +46,7 @@ while True:
 for i in range(users_quantity):
     this_user_number = str(i + 1)
 
+    sku = parser.get('other', 'sku_' + this_user_number)
     port = parser.get('other', 'chrome_port_' + this_user_number)
     chrome_files = parser.get('dirs', 'chrome_files_dir_' + this_user_number)
     subprocess.Popen(['run.exe', 'purchase', sku, port, chrome_files])

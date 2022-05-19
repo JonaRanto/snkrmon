@@ -1,5 +1,7 @@
-# snkrmon v2.2.1
+# snkrmon v2.3.0
 ## Control de versiones
+### v2.3.0 - Multiples SKU
+    - Se permite establecer un SKU individual para cada usuario.
 ### v2.2.1 - Eliminación de datos redundantes al instalar
     - Se eliminan los archivos .py al realizar el despliegue.
     - Se quita el icono del run.exe.
