@@ -14,6 +14,8 @@ while True:
 
     users_quantity = gui_return['users_quantity']
 
+    busy_port = False
+
     for n in range(users_quantity):
         this_user_number = str(n + 1)
 
@@ -22,8 +24,6 @@ while True:
 
         if not os.path.isdir(parser.get('dirs', 'chrome_files_dir_' + this_user_number)):
             os.makedirs(parser.get('dirs', 'chrome_files_dir_' + this_user_number))
-
-        busy_port = False
 
         log('Verificando estado de puerto.')
         try:
@@ -42,8 +42,6 @@ while True:
             
     if busy_port == False:
         break
-    else:
-        exit()
 
 for i in range(users_quantity):
     this_user_number = str(i + 1)
@@ -51,7 +49,7 @@ for i in range(users_quantity):
     sku = parser.get('other', 'sku_' + this_user_number)
     port = parser.get('other', 'chrome_port_' + this_user_number)
     chrome_files = parser.get('dirs', 'chrome_files_dir_' + this_user_number)
-    #subprocess.Popen(['dist/snkrmon-v2.3.1/run.exe', 'purchase', sku, port, chrome_files], creationflags=subprocess.CREATE_NEW_CONSOLE)
-    subprocess.Popen(['run.exe', 'purchase', sku, port, chrome_files], creationflags=subprocess.CREATE_NEW_CONSOLE)
+    subprocess.Popen(['dist/snkrmon-v2.3.1/run.exe', 'purchase', sku, port, chrome_files], creationflags=subprocess.CREATE_NEW_CONSOLE)
+    #subprocess.Popen(['run.exe', 'purchase', sku, port, chrome_files], creationflags=subprocess.CREATE_NEW_CONSOLE)
 log('Se han finalizado todos los procesos.')
 input('')

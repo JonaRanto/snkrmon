@@ -1,5 +1,7 @@
-# snkrmon v2.3.1
+# snkrmon v2.3.2
 ## Control de versiones
+### v2.3.2 - Corrección de bug
+    - Se elimina bug que ejecutaba la aplicación con puertos bloqueados igualmente al encontrar al menos un puerto disponible en el listado de puertos a revisar.
 ### v2.3.1 - Corrección de bug congelamiento de ventanas en el back
     - Se modifica el tamaño inicial de la ventana en la configuración.
     - Se elimina el minimizar y maximizar ventana al finalizar el proceso de compra.
