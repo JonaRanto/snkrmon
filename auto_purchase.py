@@ -132,10 +132,10 @@ def purchase(sku: str, port: str, chrome_files: str):
         except Exception as e:
             log(str(e), 40, identity=identity)
 
-    log('Cambiando el focus a la pagina principal.')
+    log('Cambiando el focus a la pagina principal.', identity=identity)
     wd.switch_to.default_content()
     wd.find_element(By.XPATH, '//button[@id=\'payment-data-submit\'][2]').click()
-    purchase_alert(wd)
+    purchase_alert()
     log('El proceso de compra se ha finalizado exitosamente.', identity=identity)
 
 if __name__ == '__main__':

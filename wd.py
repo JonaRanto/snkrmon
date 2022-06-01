@@ -11,8 +11,8 @@ from log_control import log
 def wd_conn(chrome_path, chrome_filename, port, chrome_files, current_path, window_size):
     from selenium import webdriver as wd
 
-    cmd = '"' + chrome_path + chrome_filename + '"' + ' --remote-debugging-port=' + port + ' --user-data-dir=' + '"' + current_path + chrome_files + '" --window_size=' + window_size
-    
+    cmd = '"' + chrome_path + chrome_filename + '"' + ' --remote-debugging-port=' + port + ' --user-data-dir=' + '"' + current_path + chrome_files + '" --window-size=' + window_size
+    log(cmd)
     log('Abriendo Chrome...', 20)
     subprocess.Popen(cmd)
 

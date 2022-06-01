@@ -1,5 +1,9 @@
-# snkrmon v2.3.0
+# snkrmon v2.3.1
 ## Control de versiones
+### v2.3.1 - Corrección de bug congelamiento de ventanas en el back
+    - Se modifica el tamaño inicial de la ventana en la configuración.
+    - Se elimina el minimizar y maximizar ventana al finalizar el proceso de compra.
+    - Se utilizan multiples consolas para cada uno de los procesos de forma independiente
 ### v2.3.0 - Multiples SKU
     - Se permite establecer un SKU individual para cada usuario.
 ### v2.2.1 - Eliminación de datos redundantes al instalar

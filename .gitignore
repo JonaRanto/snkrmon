@@ -1,5 +1,5 @@
 /__pycache__
-/chrome_files
+/chrome_files*
 /logs
 /build
 /dist
