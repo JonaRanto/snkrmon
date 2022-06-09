@@ -1,5 +1,7 @@
-# snkrmon v2.3.2
+# snkrmon v2.3.3
 ## Control de versiones
+### v2.3.3 - Corrección de bug
+    - Se selecciona como metodo de pago, la tarjeta de credito antes de rellenar los datos.
 ### v2.3.2 - Corrección de bug
     - Se elimina bug que ejecutaba la aplicación con puertos bloqueados igualmente al encontrar al menos un puerto disponible en el listado de puertos a revisar.
 ### v2.3.1 - Corrección de bug congelamiento de ventanas en el back

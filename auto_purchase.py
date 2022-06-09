@@ -86,6 +86,8 @@ def purchase(sku: str, port: str, chrome_files: str):
             cvv = parser.get('payment_process', 'cvv')
             card_owner_run = parser.get('payment_process', 'card_owner_run')
 
+            log('Seleccionando pago con tarjeta de credito.', identity=identity)
+            wd.find_element(By.ID, 'payment-group-creditCardPaymentGroup').click()
             log('Cambiando focus a zona de pago.', identity=identity)
             wd.switch_to.frame(wd.find_element(By.XPATH, '//iframe[@class="span12"]'))
             WebDriverWait(wd, elements_timeout_limit).until(ec.presence_of_element_located((By.XPATH, '//div[@class="CardForm"]')))
